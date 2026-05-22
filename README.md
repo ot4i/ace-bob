@@ -37,7 +37,7 @@ This repo provides step-by-step instructions for how to get up and running with 
 
 6. From the Launch Terminal pop-up, select IBM Bob Shell from the **Choose terminal** dropdown and click OK:
 
-   <img src="https://github.ibm.com/user-attachments/assets/41743abe-7b28-49ca-920f-ea86513a2623" width="500"/>
+   <img src="Images/ACE_Bob05a.png" width="500"/>
 
 7. An IBM Bob Shell Terminal will open. By default it will be located at the bottom of the screen:
 
