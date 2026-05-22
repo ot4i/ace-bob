@@ -59,13 +59,13 @@ This repo provides step-by-step instructions for how to get up and running with 
 
 Skills are reusable instruction sets that teach IBM Bob about specialized tasks so they can be completed in a consistent, repeatable manner. When you activate a skill, IBM Bob receives the skill's instructions and gains access to any supporting files in the skill directory. Bob then follows these instructions to complete your task according to the defined workflow. Skills load once per conversation to avoid duplicate prompts. Bob automatically determines when to activate a skill based on your request and the skill's description.
 
-When operating IBM Bob Shell in the ACE Toolkit, the prior configuration steps documented above have targetted your ACE Toolkit Eclipse workspace to be the IBM Bob project root directory. So, to make skills available for IBM Bob Shell in this context, navigate to this ACE Toolkit Eclipse workspace and if it does not already exist, create a folder called **/.bob Alternatively if you want to use IBM Bob across multiple ACE Toolkit workspaces, you might prefer to define ACE skills globally in your user's home directory. Based on my experiences, the best choice would be to locate the skill in the .bob folder within your Toolkit workspace as this improves the chances of Bob being able to find it and use it consistently.
+When operating IBM Bob Shell in the ACE Toolkit, the prior configuration steps documented above have targetted your ACE Toolkit Eclipse workspace to be the IBM Bob project root directory. So, to make skills available for IBM Bob Shell in this context, navigate to this ACE Toolkit Eclipse workspace and if it does not already exist, create a folder called `/.bob` Alternatively if you want to use IBM Bob across multiple ACE Toolkit workspaces, you might prefer to define ACE skills globally in your user's home directory. Based on my experiences, the best choice would be to locate the skill in the .bob folder within your Toolkit workspace as this improves the chances of Bob being able to find it and use it consistently.
 
 To help you get up and running with using Bob with ACE, we've been trying out different approaches for the structure of an ACE Bob skill. You can find the skill definition in this repository. The skill teaches IBM Bob about the structure of IBM ACE Toolkit Eclipse projects, the art of creating message flows and ESQL that follows best practices. You can git clone the ace-bob skill into the .bob folder of your ACE Toolkit workspace as shown below:
 
 ![image](Images/ACE_Bob10.png)
 
-## Future To-Do List for refining the IBM Bob Skill
+## Future Potential To-Do List for refining the IBM Bob Skill
 * **DONE:** Tell the Skill where to locate the MessageFlow.xsd to avoid Bob guessing at the class names for nodes (often Bob will incorrectly guess at ComIbmHTTPInput for example)
 * **DONE:** Teach Bob about the structure of Eclipse projects including the .project file and Application descriptor
 * **DONE:** Declare REFERENCEs in order to minimize CPU spend on navigation of the logical tree (especially when dealing with heavily nested structures)
