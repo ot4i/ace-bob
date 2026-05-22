@@ -25,18 +25,18 @@ This repo provides step-by-step instructions for how to get up and running with 
 
    Click **Add**. Control will return back to the prior window showing preferences for Local Terminal. From the drop-down menu change the Initial Working Directory to be **Eclipse workspace**.
 
-   ![image](https://github.ibm.com/user-attachments/assets/fd587be4-fce7-48ff-8687-81ce82e78eeb)
+   ![image](Images/ACE_Bob03.png)
 
    Click **Apply and Close**.
 
 3. Return to the Toolkit's Window menu and choose Preferences again. When the Preferences pop-up opens, use the filter to navigate to the section **Terminal**. From the Presets drop-down, select Eclipse Dark and click **Apply and Close**:
    
-   ![image](https://github.ibm.com/user-attachments/assets/2b6a7aaf-fbd5-45a5-b270-afecb1821e0b)
+   ![image](Images/ACE_Bob04.png)
 
 
 4. Staying in the ACE Toolkit, from the top Toolbar click the **Terminal** shortcut (shown in the red box below):
 
-   ![image](https://github.ibm.com/user-attachments/assets/a3653554-a19b-46b5-9f4d-5712a11aa1dc)
+   ![image](Images/ACE_Bob05.png)
 
 5. From the Launch Terminal pop-up, select IBM Bob Shell from the **Choose terminal** dropdown and click OK:
 
@@ -44,19 +44,19 @@ This repo provides step-by-step instructions for how to get up and running with 
 
 6. An IBM Bob Shell Terminal will open. By default it will be located at the bottom of the screen:
 
-   ![image](https://github.ibm.com/user-attachments/assets/cb2d514a-297c-4838-b07f-c3677ff2c376)
+   ![image](Images/ACE_Bob06.png)
 
    Scroll down and on first use you will be presented with a dialog to accept the IBM Bob License:
 
-   ![image](https://github.ibm.com/user-attachments/assets/73aec59c-0aac-4c77-9966-88299314bf47)
+   ![image](Images/ACE_Bob07.png)
 
    Next you will be asked to trust the folder. Due to our earlier set-up we have chosen to launch IBM Bob's workspace to match the ACE Toolkit's Eclipse workspace directory. This makes it easier to use IBM Bob to interact with ACE Toolkit files in the local workspace.
 
-   ![image](https://github.ibm.com/user-attachments/assets/ca2d404c-1181-4b20-959b-b7cada03f34a)
+   ![image](Images/ACE_Bob08.png)
 
    If you've already been using IBM Bob then he may ask you to trust other directories as well. Once you have made these decisions IBM Bob Shell will be ready to respond to queries as shown below:
 
-   ![image](https://github.ibm.com/user-attachments/assets/e5234b16-059f-436c-8ef9-65e9dddb8d00)
+   ![image](Images/ACE_Bob09.png)
 
 ## Configuring the ace-bob IBM Bob skill
 
