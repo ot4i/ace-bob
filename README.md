@@ -63,12 +63,12 @@ When operating IBM Bob Shell in the ACE Toolkit, the prior configuration steps d
 
 To help you get up and running with using Bob with ACE, we've been trying out different approaches for the structure of an ACE Bob skill. You can find the skill definition in this repository. The skill teaches IBM Bob about the structure of IBM ACE Toolkit Eclipse projects, the art of creating message flows and ESQL that follows best practices. You can git clone the ace-bob skill into the .bob folder of your ACE Toolkit workspace as shown below:
 
-![image](https://github.ibm.com/user-attachments/assets/06db7e47-3e90-4bac-a599-dc04c72afda7)
+![image](Images/ACE_Bob10.png)
 
 ## Future To-Do List for refining the IBM Bob Skill
-* DONE: Tell the Skill where to locate the MessageFlow.xsd to avoid Bob guessing at the class names for nodes (often Bob will incorrectly guess at ComIbmHTTPInput for example)
-* DONE: Teach Bob about the structure of Eclipse projects including the .project file and Application descriptor
-* DONE: Declare REFERENCEs in order to minimize CPU spend on navigation of the logical tree (especially when dealing with heavily nested structures)
+* **DONE:** Tell the Skill where to locate the MessageFlow.xsd to avoid Bob guessing at the class names for nodes (often Bob will incorrectly guess at ComIbmHTTPInput for example)
+* **DONE:** Teach Bob about the structure of Eclipse projects including the .project file and Application descriptor
+* **DONE:** Declare REFERENCEs in order to minimize CPU spend on navigation of the logical tree (especially when dealing with heavily nested structures)
 * Tell Bob what to do about subflow division and the use of dependent libraries.
 * Avoid multiple consecutive Compute nodes where possible (tree copying expensive)
 * Do not use CARDINALITY statement inside loops
