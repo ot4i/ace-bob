@@ -9,20 +9,19 @@ This repo provides step-by-step instructions for how to get up and running with 
 
    ```irm -Uri "https://bob.ibm.com/download/bobshell.ps1" | iex```
 
-   ![image](https://github.ibm.com/user-attachments/assets/7ed76dd5-0000-48c2-bfe6-1a0b8a40ce5d)
 
 ## Running IBM Bob Shell in ACE Toolkit
 
 1. Start the ACE Toolkit and from the Toolkit's Window menu choose Preferences. When the Preferences pop-up opens navigate to the section **Terminal > Local Terminal**
 
-   ![image](https://github.ibm.com/user-attachments/assets/d5760607-5f6e-4571-b925-e3ce4d86dcf8)
+   ![image](Images/ACE_Bob01.png)
 
 2. Click the **Add** button and in the resulting dialog provide the following details:
 
    * Name = **IBM Bob Shell**
    * Path = **C:\Users\BenThompson\AppData\Roaming\npm\Bob.cmd**
    <br />
-   <img src="https://github.ibm.com/user-attachments/assets/ac6839e1-0694-4e87-8be6-00c7ae7fd470" width="500"/>
+   <img src="Images/ACE_Bob02.png" width="500"/>
 
    Click **Add**. Control will return back to the prior window showing preferences for Local Terminal. From the drop-down menu change the Initial Working Directory to be **Eclipse workspace**.
 
