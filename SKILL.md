@@ -252,6 +252,7 @@ Before creating **ANY** artifacts, you **MUST**:
    - If you add a Change Data Capture node to a message flow, it **MUST** have an xmi:type attribute using the namespace prefix of ComIbmChangeDataCapture.msgnode
    - If you add a Databricks Input node to a message flow, it **MUST** have an xmi:type attribute using the namespace prefix of ComIbmApplicationConnectorInput_databricks.msgnode and an attribute applicationConnectorType="databricks"
    - If you add a DocuSign Request node to a message flow, it **MUST** have an xmi:type attribute using the namespace prefix of ComIbmApplicationConnectorRequest_docusign.msgnode and an attribute applicationConnectorType="docusign"
+   - If you add a DocuSign Request node to a message flow you **MUST** read the skill guidance in DocuSign.md to help determine the node properties
    - If you add a Dropbox Request node to a message flow, it **MUST** have an xmi:type attribute using the namespace prefix of ComIbmApplicationConnectorRequest_dropbox.msgnode and an attribute applicationConnectorType="dropbox"
    - If you add a Dropbox Request node to a message flow you **MUST** read the skill guidance in Dropbox.md to help determine the node properties
    - If you add a Email Output node to a message flow, it **MUST** have an xmi:type attribute using the namespace prefix of ComIbmEmailOutput.msgnode
