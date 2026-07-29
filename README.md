@@ -1,41 +1,60 @@
 # ace-bob
-This repo provides step-by-step instructions for how to get up and running with IBM Bob within the ACE Toolkit: 
-* Installing IBM Bob Shell
-* Running IBM Bob Shell in ACE Toolkit (by creating a Terminal window shortcut and preferences)
-* Configuring the ace-bob IBM Bob skill (This teaches IBM Bob the art of creating message flows and ESQL that follow best practices)
+This repository provides IBM Bob Shell guidance for IBM App Connect Enterprise (ACE) Toolkit users. It combines:
+- setup instructions for running IBM Bob Shell inside ACE Toolkit
+- focused Bob skills for creating and explaining ACE artifacts
+- shared ACE reference material for projects, node types, policies, ESQL, and JavaCompute
+
+## Who this repository is for
+Use this repository if you want IBM Bob Shell to help with ACE Toolkit assets such as:
+- message flows (`.msgflow`)
+- ESQL (`.esql`)
+- JavaCompute classes (`.java`)
+- connector-based flows and related policy files
+
+## Quick start
+1. Install IBM Bob Shell.
+2. Configure ACE Toolkit to launch IBM Bob Shell in your Eclipse workspace.
+3. Clone this repository into the `.bob` folder in that workspace.
+4. Use the skills under [`skills/`](skills) as the canonical ACE guidance.
+
+## What this repository provides
+- ACE Toolkit and IBM Bob Shell setup guidance
+- focused Bob skills under [`skills/`](skills)
+- shared ACE guidance under [`skills/shared/`](skills/shared)
+- connector-specific guidance under [`skills/shared/connectors/`](skills/shared/connectors)
+- legacy root-level compatibility stubs for earlier connector file paths
 
 ## Installing IBM Bob Shell
-1. The ACE Toolkit runs on Windows, xLinux or MacOS. You can find detailed instructions for installing IBM Bob shell on each of these platforms [here](https://bob.ibm.com/docs/shell/getting-started/install-and-setup). Focussing on Windows, you can open Powershell and install IBM Bob Shell using this command:
+The ACE Toolkit runs on Windows, Linux, or macOS. You can find detailed instructions for installing IBM Bob Shell on each of these platforms [here](https://bob.ibm.com/docs/shell/getting-started/install-and-setup). Focusing on Windows, you can open PowerShell and install IBM Bob Shell using this command:
 
-   ```irm -Uri "https://bob.ibm.com/download/bobshell.ps1" | iex```
-
+```irm -Uri "https://bob.ibm.com/download/bobshell.ps1" | iex```
 
 ## Running IBM Bob Shell in ACE Toolkit
 
-1. Start the ACE Toolkit and from the Toolkit's Window menu choose Preferences. When the Preferences pop-up opens navigate to the section **Terminal > Local Terminal** and click the **Add** button (on the right hand side of the window):
+1. Start the ACE Toolkit and from the Toolkit's Window menu choose Preferences. When the Preferences pop-up opens navigate to the section **Terminal > Local Terminal** and click the **Add** button on the right-hand side of the window:
 
    ![image](Images/ACE_Bob01.png)
 
 2. In the resulting dialog provide the following details and then click the **Add** button:
 
-   * Name = **IBM Bob Shell**
-   * Path = **C:\Users\YourUserName\AppData\Roaming\npm\Bob.cmd**
+   - Name = **IBM Bob Shell**
+   - Path = **C:\Users\YourUserName\AppData\Roaming\npm\Bob.cmd**
    <br />
    <img src="Images/ACE_Bob02.png" width="500"/>
 
-3. Control will return back to the previous Preferences window. From the drop-down menu change the Initial Working Directory to be **Eclipse workspace** and then click the **Apply and Close** button.
+3. Control will return to the previous Preferences window. From the drop-down menu change the Initial Working Directory to **Eclipse workspace** and then click the **Apply and Close** button.
 
    ![image](Images/ACE_Bob03.png)
 
-4. From the **Window menu**, choose **Preferences** again. When the **Preferences** window opens, use the filter to navigate to the section **Terminal**. From the **Presets** drop-down, select **Eclipse Dark** and click the **Apply and Close** button:
+4. From the **Window** menu, choose **Preferences** again. When the **Preferences** window opens, use the filter to navigate to the section **Terminal**. From the **Presets** drop-down, select **Eclipse Dark** and click the **Apply and Close** button:
 
    ![image](Images/ACE_Bob04.png)
 
-5. From the top Toolbar in the Toolkit, click the **Terminal** shortcut (shown in the red box below):
+5. From the top toolbar in the Toolkit, click the **Terminal** shortcut shown in the red box below:
 
    ![image](Images/ACE_Bob05.png)
 
-6. From the Launch Terminal pop-up, select IBM Bob Shell from the **Choose terminal** dropdown and click OK:
+6. From the Launch Terminal pop-up, select **IBM Bob Shell** from the **Choose terminal** drop-down and click **OK**:
 
    <img src="Images/ACE_Bob05a.png" width="500"/>
 
@@ -43,39 +62,48 @@ This repo provides step-by-step instructions for how to get up and running with 
 
    ![image](Images/ACE_Bob06.png)
 
-8. Scroll down and (on first use) you will be presented with a dialog to accept the IBM Bob License:
+8. Scroll down and on first use you will be presented with a dialog to accept the IBM Bob license:
 
    ![image](Images/ACE_Bob07.png)
 
-9. Next you will be asked to trust the folder. Due to our earlier set-up we have chosen to launch IBM Bob's workspace to match the ACE Toolkit's Eclipse workspace directory. This makes it easier to use IBM Bob to interact with ACE Toolkit files in the local workspace.
+9. Next you will be asked to trust the folder. Due to the earlier setup, IBM Bob's workspace matches the ACE Toolkit Eclipse workspace directory. This makes it easier to use IBM Bob to interact with ACE Toolkit files in the local workspace.
 
    ![image](Images/ACE_Bob08.png)
 
-10. If you've already been using IBM Bob then he may ask you to trust other directories as well. Once you have made these decisions IBM Bob Shell will be ready to respond to queries as shown below:
+10. If you have already been using IBM Bob then it may ask you to trust other directories as well. Once you have made these decisions, IBM Bob Shell will be ready to respond to queries as shown below:
 
    ![image](Images/ACE_Bob09.png)
 
-## Configuring the ace-bob IBM Bob skill
+## Installing the ACE Bob skills into `.bob`
+When operating IBM Bob Shell in the ACE Toolkit, the earlier configuration steps target your ACE Toolkit Eclipse workspace as the IBM Bob project root directory. To make these skills available for IBM Bob Shell in this context, navigate to this ACE Toolkit Eclipse workspace and, if it does not already exist, create a folder called `.bob`.
 
-Skills are reusable instruction sets that teach IBM Bob about specialized tasks so they can be completed in a consistent, repeatable manner. When you activate a skill, IBM Bob receives the skill's instructions and gains access to any supporting files in the skill directory. Bob then follows these instructions to complete your task according to the defined workflow. Skills load once per conversation to avoid duplicate prompts. Bob automatically determines when to activate a skill based on your request and the skill's description.
+If you want to use IBM Bob across multiple ACE Toolkit workspaces, you might prefer to define ACE skills globally in your user's home directory. Based on current experience, locating the skill repository in the `.bob` folder within your Toolkit workspace improves the chances of Bob being able to find it and use it consistently.
 
-When operating IBM Bob Shell in the ACE Toolkit, the prior configuration steps documented above have targetted your ACE Toolkit Eclipse workspace to be the IBM Bob project root directory. So, to make skills available for IBM Bob Shell in this context, navigate to this ACE Toolkit Eclipse workspace and if it does not already exist, create a folder called `/.bob` Alternatively if you want to use IBM Bob across multiple ACE Toolkit workspaces, you might prefer to define ACE skills globally in your user's home directory. Based on my experiences, the best choice would be to locate the skill in the .bob folder within your Toolkit workspace as this improves the chances of Bob being able to find it and use it consistently.
-
-To help you get up and running with using Bob with ACE, we've been trying out different approaches for the structure of an ACE Bob skill. You can find the skill definition in this repository. The skill teaches IBM Bob about the structure of IBM ACE Toolkit Eclipse projects, the art of creating message flows and ESQL that follows best practices. You can git clone the ace-bob skill into the .bob folder of your ACE Toolkit workspace as shown below:
+Clone this repository into the `.bob` folder of your ACE Toolkit workspace as shown below:
 
 ![image](Images/ACE_Bob10.png)
 
-## Future Potential To-Do List for refining the IBM Bob Skill
-* **DONE:** Tell the Skill where to locate the MessageFlow.xsd to avoid Bob guessing at the class names for nodes (often Bob will incorrectly guess at ComIbmHTTPInput for example)
-* **DONE:** Teach Bob about the structure of Eclipse projects including the .project file and Application descriptor
-* **DONE:** Declare REFERENCEs in order to minimize CPU spend on navigation of the logical tree (especially when dealing with heavily nested structures)
-* Tell Bob what to do about subflow division and the use of dependent libraries.
-* Avoid multiple consecutive Compute nodes where possible (tree copying expensive)
-* Do not use CARDINALITY statement inside loops
-* Minimize the use of String manipulation functions
-* Make ESQL code as efficient as possible by minimizing the number of statements
-* Use the LASTMOVE or CARDINALITY statement when wanting to check for the existence of a field
-* Use the CREATE with PARSE statement in preference to serialising a copy of the logical tree
-* Encourage the use of the Catch terminal at the start of the message flow in preference to the messy flow design of wiring every Failure terminal of individual nodes
-* Add something about Compute mode and when to make the Compute node responsible for tree copying versus just editting isolated areas of the tree such as LocalEnvironment
-* Give a list of ESQL functions that do NOT exist to avoid Bob making silly mistakes (eg CHECKSUM)
+## Repository structure
+The repository is organized around the [`skills/`](skills) directory:
+
+- [`skills/ace-message-flow/`](skills/ace-message-flow) contains the Bob skill for generic ACE Toolkit `.msgflow` creation
+- [`skills/ace-connector-flows/`](skills/ace-connector-flows) contains the Bob skill for connector-based ACE flows
+- [`skills/ace-project-setup/`](skills/ace-project-setup) contains the Bob skill for ACE Toolkit application and policy project scaffolding
+- [`skills/ace-esql/`](skills/ace-esql) contains the Bob skill for ACE ESQL generation and refinement
+- [`skills/ace-java-compute/`](skills/ace-java-compute) contains the Bob skill for ACE JavaCompute generation and refinement
+- [`skills/shared/`](skills/shared) contains shared ACE project, policy, version, review, and node type guidance
+- [`skills/shared/connectors/`](skills/shared/connectors) contains connector-specific guidance files
+- [`Images/`](Images) contains setup screenshots used in this README
+
+## Active skills
+- [`ace-message-flow`](skills/ace-message-flow/SKILL.md)
+- [`ace-connector-flows`](skills/ace-connector-flows/SKILL.md)
+- [`ace-project-setup`](skills/ace-project-setup/SKILL.md)
+- [`ace-esql`](skills/ace-esql/SKILL.md)
+- [`ace-java-compute`](skills/ace-java-compute/SKILL.md)
+
+## Canonical locations
+- The main compatibility entry point is [`SKILL.md`](SKILL.md).
+- The canonical task-specific skills are under [`skills/`](skills).
+- Shared guidance is under [`skills/shared/`](skills/shared).
+- Root-level connector markdown files are legacy compatibility stubs that point to the canonical connector docs under [`skills/shared/connectors/`](skills/shared/connectors).
