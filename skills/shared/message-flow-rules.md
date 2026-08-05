@@ -42,7 +42,18 @@ Before returning generated `.msgflow` content:
 - confirm any required supporting artifacts were also created or identified
 - apply the common checks in [`skills/shared/review-checklist.md`](review-checklist.md)
 
+## Examples 
+When creating `.msgflow` content in an Application project note the example [`skills/shared/ExampleApplication/Example.msgflow`](Example.msgflow)
+When creating `.msgflow` content in a REST API project note the example [`skills/shared/ExampleAPI/gen/ExampleAPI.msgflow`](ExampleAPI.msgflow)
+When creating `.subflow` content in a REST API project note the example [`skills/shared/ExampleAPI/createWidget.subflow`](createWidget.subflow), [`skills/shared/ExampleAPI/retrieveWidget.subflow`](retrieveWidget.subflow), [`skills/shared/ExampleAPI/updateWidget.subflow`](updateWidget.subflow), [`skills/shared/ExampleAPI/deleteWidget.subflow`](deleteWidget.subflow)
+
 ## Related files
 - [`skills/shared/ace-versions.md`](ace-versions.md)
 - [`skills/shared/node-types.md`](node-types.md)
 - [`skills/shared/review-checklist.md`](review-checklist.md)
+- [`skills/shared/ExampleApplication/Example.msgflow`]
+- [`skills/shared/ExampleAPI/gen/ExampleAPI.msgflow`]
+- [`skills/shared/ExampleAPI/createWidget.subflow`]
+- [`skills/shared/ExampleAPI/retrieveWidget.subflow`]
+- [`skills/shared/ExampleAPI/updateWidget.subflow`]
+- [`skills/shared/ExampleAPI/deleteWidget.subflow`]

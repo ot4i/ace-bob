@@ -1,0 +1,227 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "Widget API",
+    "description": "API for managing widgets.",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "/exampleapi/v1"
+    }
+  ],
+  "paths": {
+    "/widgets": {
+      "post": {
+        "operationId": "createWidget",
+        "summary": "Create a new widget",
+        "description": "Creates a new widget and returns the created resource.",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/WidgetInput"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Widget created successfully.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Widget"
+                }
+              }
+            }
+          },
+          "400": {
+            "$ref": "#/components/responses/BadRequest"
+          }
+        }
+      }
+    },
+    "/widgets/{widgetId}": {
+      "get": {
+        "operationId": "retrieveWidget",
+        "summary": "Retrieve a widget",
+        "description": "Returns a single widget by its identifier.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/widgetId"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Widget retrieved successfully.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Widget"
+                }
+              }
+            }
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
+          }
+        }
+      },
+      "put": {
+        "operationId": "updateWidget",
+        "summary": "Update a widget",
+        "description": "Replaces the widget identified by `widgetId` with the supplied data.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/widgetId"
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/WidgetInput"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Widget updated successfully.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Widget"
+                }
+              }
+            }
+          },
+          "400": {
+            "$ref": "#/components/responses/BadRequest"
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
+          }
+        }
+      },
+      "delete": {
+        "operationId": "deleteWidget",
+        "summary": "Delete a widget",
+        "description": "Permanently removes the widget identified by `widgetId`.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/widgetId"
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Widget deleted successfully. No content returned."
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "parameters": {
+      "widgetId": {
+        "name": "widgetId",
+        "in": "path",
+        "required": true,
+        "description": "The unique identifier of the widget.",
+        "schema": {
+          "type": "string"
+        }
+      }
+    },
+    "schemas": {
+      "WidgetInput": {
+        "type": "object",
+        "required": ["name"],
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Human-readable name of the widget.",
+            "example": "My Widget"
+          },
+          "description": {
+            "type": "string",
+            "description": "Optional description of the widget.",
+            "example": "A widget that does things."
+          }
+        }
+      },
+      "Widget": {
+        "allOf": [
+          {
+            "type": "object",
+            "required": ["id", "createdAt", "updatedAt"],
+            "properties": {
+              "id": {
+                "type": "string",
+                "description": "Unique identifier assigned by the server.",
+                "example": "wgt_01J0ABCDEF"
+              },
+              "createdAt": {
+                "type": "string",
+                "format": "date-time",
+                "description": "ISO 8601 timestamp of when the widget was created."
+              },
+              "updatedAt": {
+                "type": "string",
+                "format": "date-time",
+                "description": "ISO 8601 timestamp of when the widget was last updated."
+              }
+            }
+          },
+          {
+            "$ref": "#/components/schemas/WidgetInput"
+          }
+        ]
+      },
+      "Error": {
+        "type": "object",
+        "required": ["code", "message"],
+        "properties": {
+          "code": {
+            "type": "string",
+            "description": "Machine-readable error code.",
+            "example": "VALIDATION_ERROR"
+          },
+          "message": {
+            "type": "string",
+            "description": "Human-readable error description.",
+            "example": "The 'name' field is required."
+          }
+        }
+      }
+    },
+    "responses": {
+      "BadRequest": {
+        "description": "The request was malformed or failed validation.",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/Error"
+            }
+          }
+        }
+      },
+      "NotFound": {
+        "description": "The requested widget could not be found.",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/Error"
+            }
+          }
+        }
+      }
+    }
+  }
+}
