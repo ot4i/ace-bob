@@ -49,14 +49,13 @@ The following combinations are allowed for Google Chat Request nodes:
 
 ## Policy requirements
 - Create policies in an ACE Policy project, not in an Application project.
-- A suitable default policy reference is similar to `{DiscoveryConnectorPolicyProject}:googlechat`.
-- The policy file is available at `EveryPolicy/googlechat.policyxml`.
+- A suitable default policy reference is similar to `{DiscoveryConnectorPolicyProject}:Googlechat1`.
 
 ## Example policy
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <policies>
-  <policy longDescription="" policyName="googlechat" policyTemplate="online_v1_basic_oauth" policyType="googlechat" shortDescription="" version="">
+  <policy longDescription="" policyName="Googlechat1" policyTemplate="online_v1_basic_oauth" policyType="googlechat" shortDescription="" version="">
      <credentialName/>
      <applicationVersion>v1</applicationVersion>
      <applicationType>online</applicationType>
@@ -73,9 +72,3 @@ The following combinations are allowed for Google Chat Request nodes:
 ## Related files
 - [`skills/shared/connector-index.md`](../connector-index.md)
 - [`skills/shared/node-types.md`](../node-types.md)
-- [`loopback-connector-googlechat/descriptors/googlechat.json`](../loopback-connector-googlechat/descriptors/googlechat.json)
-- [`loopback-connector-googlechat/descriptors/googlechat.yaml`](../loopback-connector-googlechat/descriptors/googlechat.yaml)
-- [`loopback-connector-googlechat/lib/openapi/connector.json`](../loopback-connector-googlechat/lib/openapi/connector.json)
-- [`loopback-connector-googlechat/lib/constants.json`](../loopback-connector-googlechat/lib/constants.json)
-- [`appconnect-connector-googlechat/lib/openapi/connector.json`](../appconnect-connector-googlechat/lib/openapi/connector.json)
-- [`EveryPolicy/googlechat.policyxml`](../EveryPolicy/googlechat.policyxml)

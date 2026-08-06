@@ -68,27 +68,13 @@ The following combinations are allowed for Google Universal Analytics Request no
 
 ## Policy requirements
 - Create policies in an ACE Policy project, not in an Application project.
-- For Google Universal Analytics (deprecated): a suitable default policy reference is similar to `{DiscoveryConnectorPolicyProject}:googleuniversalanalytics`. The policy file is available at `EveryPolicy/googleuniversalanalytics.policyxml`.
-- For Google Analytics 4: a suitable default policy reference is similar to `{DiscoveryConnectorPolicyProject}:googleanalytics`. The policy file is available at `EveryPolicy/googleanalytics.policyxml`.
-
-## Example policy — Google Universal Analytics (deprecated)
-```xml
-<?xml version="1.0" encoding="UTF-8"?>
-<policies>
-  <policy longDescription="" policyName="googleuniversalanalytics" policyTemplate="online_v1_basic_oauth" policyType="googleanalytics" shortDescription="" version="">
-     <credentialName/>
-     <applicationVersion>v1</applicationVersion>
-     <applicationType>online</applicationType>
-     <authenticationMethod>BASIC_OAUTH</authenticationMethod>
-  </policy>
-</policies>
-```
+- For Google Analytics 4: a suitable default policy reference is similar to `{DiscoveryConnectorPolicyProject}:Googleanalytics1`. 
 
 ## Example policy — Google Analytics 4
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <policies>
-  <policy longDescription="" policyName="googleanalytics" policyTemplate="online_v1_basic_oauth" policyType="googleanalytics4" shortDescription="" version="">
+  <policy longDescription="" policyName="Googleanalytics1" policyTemplate="online_v1_basic_oauth" policyType="googleanalytics4" shortDescription="" version="">
      <credentialName/>
      <applicationVersion>v1</applicationVersion>
      <applicationType>online</applicationType>
@@ -105,10 +91,3 @@ The following combinations are allowed for Google Universal Analytics Request no
 ## Related files
 - [`skills/shared/connector-index.md`](../connector-index.md)
 - [`skills/shared/node-types.md`](../node-types.md)
-- [`loopback-connector-googleanalytics/descriptors/googleanalytics.json`](../loopback-connector-googleanalytics/descriptors/googleanalytics.json)
-- [`loopback-connector-googleanalytics/descriptors/googleanalytics.yaml`](../loopback-connector-googleanalytics/descriptors/googleanalytics.yaml)
-- [`loopback-connector-googleanalytics/lib/constants/gaConstants.json`](../loopback-connector-googleanalytics/lib/constants/gaConstants.json)
-- [`loopback-connector-googleanalytics/lib/constants/metadata.json`](../loopback-connector-googleanalytics/lib/constants/metadata.json)
-- [`appconnect-connector-googleanalytics/lib/openapi/connector.json`](../appconnect-connector-googleanalytics/lib/openapi/connector.json)
-- [`EveryPolicy/googleanalytics.policyxml`](../EveryPolicy/googleanalytics.policyxml)
-- [`EveryPolicy/googleuniversalanalytics.policyxml`](../EveryPolicy/googleuniversalanalytics.policyxml)

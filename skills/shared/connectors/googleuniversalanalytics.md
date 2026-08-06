@@ -65,15 +65,13 @@ The following combinations are allowed for Google Universal Analytics Request no
 
 ## Policy requirements
 - Create policies in an ACE Policy project, not in an Application project.
-- A suitable default policy reference is similar to `{DiscoveryConnectorPolicyProject}:googleuniversalanalytics`.
-- The policy file is available at `EveryPolicy/googleuniversalanalytics.policyxml`.
-- Note: the policy uses `policyType="googleanalytics"` (not `googleuniversalanalytics`) and `policyName="googleuniversalanalytics"`. It uses `authenticationMethod="BASIC_OAUTH"` and does not include a `<proxyId/>` or `<apiUrl/>` field.
+- A suitable default policy reference is similar to `{DiscoveryConnectorPolicyProject}:Googleuniversalanalytics1`.
 
 ## Example policy
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <policies>
-  <policy longDescription="" policyName="googleuniversalanalytics" policyTemplate="online_v1_basic_oauth" policyType="googleanalytics" shortDescription="" version="">
+  <policy longDescription="" policyName="Googleuniversalanalytics1" policyTemplate="online_v1_basic_oauth" policyType="googleanalytics" shortDescription="" version="">
      <credentialName/>
      <applicationVersion>v1</applicationVersion>
      <applicationType>online</applicationType>
@@ -89,9 +87,3 @@ The following combinations are allowed for Google Universal Analytics Request no
 ## Related files
 - [`skills/shared/connector-index.md`](../connector-index.md)
 - [`skills/shared/node-types.md`](../node-types.md)
-- [`loopback-connector-googleanalytics/descriptors/googleanalytics.json`](../loopback-connector-googleanalytics/descriptors/googleanalytics.json)
-- [`loopback-connector-googleanalytics/descriptors/googleanalytics.yaml`](../loopback-connector-googleanalytics/descriptors/googleanalytics.yaml)
-- [`loopback-connector-googleanalytics/lib/constants/gaConstants.json`](../loopback-connector-googleanalytics/lib/constants/gaConstants.json)
-- [`loopback-connector-googleanalytics/lib/constants/metadata.json`](../loopback-connector-googleanalytics/lib/constants/metadata.json)
-- [`appconnect-connector-googleanalytics/lib/openapi/connector.json`](../appconnect-connector-googleanalytics/lib/openapi/connector.json)
-- [`EveryPolicy/googleuniversalanalytics.policyxml`](../EveryPolicy/googleuniversalanalytics.policyxml)

@@ -44,15 +44,14 @@ The following combinations are allowed for Google Gemini Request nodes:
 
 ## Policy requirements
 - Create policies in an ACE Policy project, not in an Application project.
-- A suitable default policy reference is similar to `{DiscoveryConnectorPolicyProject}:googlegemini`.
-- The policy file is available at `EveryPolicy/googlegemini.policyxml`.
+- A suitable default policy reference is similar to `{DiscoveryConnectorPolicyProject}:Googlegemini1`.
 - Note: this connector uses `authenticationMethod="BASIC_API_KEY"` with an API key credential, and includes an `<apiUrl>` field. It does not use OAuth.
 
 ## Example policy
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <policies>
-  <policy longDescription="" policyName="googlegemini" policyTemplate="online_v1_basic_api_key" policyType="googlegemini" shortDescription="" version="">
+  <policy longDescription="" policyName="Googlegemini1" policyTemplate="online_v1_basic_api_key" policyType="googlegemini" shortDescription="" version="">
      <credentialName/>
      <applicationVersion>v1</applicationVersion>
      <applicationType>online</applicationType>
@@ -70,7 +69,3 @@ The following combinations are allowed for Google Gemini Request nodes:
 ## Related files
 - [`skills/shared/connector-index.md`](../connector-index.md)
 - [`skills/shared/node-types.md`](../node-types.md)
-- [`appconnect-connector-googlegemini/descriptors/googlegemini.json`](../appconnect-connector-googlegemini/descriptors/googlegemini.json)
-- [`appconnect-connector-googlegemini/descriptors/googlegemini.yaml`](../appconnect-connector-googlegemini/descriptors/googlegemini.yaml)
-- [`appconnect-connector-googlegemini/lib/openapi/connector.json`](../appconnect-connector-googlegemini/lib/openapi/connector.json)
-- [`EveryPolicy/googlegemini.policyxml`](../EveryPolicy/googlegemini.policyxml)

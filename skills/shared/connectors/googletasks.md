@@ -46,15 +46,14 @@ The following combinations are allowed for Google Tasks Request nodes:
 
 ## Policy requirements
 - Create policies in an ACE Policy project, not in an Application project.
-- A suitable default policy reference is similar to `{DiscoveryConnectorPolicyProject}:googletasks`.
-- The policy file is available at `EveryPolicy/googletasks.policyxml`.
+- A suitable default policy reference is similar to `{DiscoveryConnectorPolicyProject}:Googletasks1`.
 - Note: this connector uses `authenticationMethod="BASIC_API_KEY"` with service account credentials (user email, service account email, and private key). It also supports `BASIC_OAUTH` and `OAUTH2_WEB` authentication.
 
 ## Example policy
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <policies>
-  <policy longDescription="" policyName="googletasks" policyTemplate="online_v1_basic_api_key" policyType="googletasks" shortDescription="" version="">
+  <policy longDescription="" policyName="Googletasks1" policyTemplate="online_v1_basic_api_key" policyType="googletasks" shortDescription="" version="">
      <credentialName/>
      <applicationVersion>v1</applicationVersion>
      <applicationType>online</applicationType>
@@ -71,11 +70,3 @@ The following combinations are allowed for Google Tasks Request nodes:
 ## Related files
 - [`skills/shared/connector-index.md`](../connector-index.md)
 - [`skills/shared/node-types.md`](../node-types.md)
-- [`loopback-connector-googletasks/descriptors/googletasks.json`](../loopback-connector-googletasks/descriptors/googletasks.json)
-- [`loopback-connector-googletasks/descriptors/googletasks.yaml`](../loopback-connector-googletasks/descriptors/googletasks.yaml)
-- [`loopback-connector-googletasks/lib/openapi/connector.json`](../loopback-connector-googletasks/lib/openapi/connector.json)
-- [`loopback-connector-googletasks/lib/constants.json`](../loopback-connector-googletasks/lib/constants.json)
-- [`appconnect-connector-googletasks/descriptors/googletasks.json`](../appconnect-connector-googletasks/descriptors/googletasks.json)
-- [`appconnect-connector-googletasks/descriptors/googletasks.yaml`](../appconnect-connector-googletasks/descriptors/googletasks.yaml)
-- [`appconnect-connector-googletasks/lib/openapi/connector.json`](../appconnect-connector-googletasks/lib/openapi/connector.json)
-- [`EveryPolicy/googletasks.policyxml`](../EveryPolicy/googletasks.policyxml)

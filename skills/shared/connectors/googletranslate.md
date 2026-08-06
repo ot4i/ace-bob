@@ -38,15 +38,14 @@ The following combinations are allowed for Google Translate Request nodes:
 
 ## Policy requirements
 - Create policies in an ACE Policy project, not in an Application project.
-- A suitable default policy reference is similar to `{DiscoveryConnectorPolicyProject}:googletranslate`.
-- The policy file is available at `EveryPolicy/googletranslate.policyxml`.
+- A suitable default policy reference is similar to `{DiscoveryConnectorPolicyProject}:Googletranslate1`.
 - Note: this connector uses `authenticationMethod="BASIC_OAUTH"` and includes an `<apiUrl/>` field for the Google Translate service endpoint URL (for example, `https://translate.googleapis.com/v3/projects/<projectID>`). It also supports `OAUTH2_WEB` authentication.
 
 ## Example policy
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <policies>
-  <policy longDescription="" policyName="googletranslate" policyTemplate="online_v1_basic_oauth" policyType="googletranslate" shortDescription="" version="">
+  <policy longDescription="" policyName="Googletranslate1" policyTemplate="online_v1_basic_oauth" policyType="googletranslate" shortDescription="" version="">
      <credentialName/>
      <applicationVersion>v1</applicationVersion>
      <applicationType>online</applicationType>
@@ -64,8 +63,3 @@ The following combinations are allowed for Google Translate Request nodes:
 ## Related files
 - [`skills/shared/connector-index.md`](../connector-index.md)
 - [`skills/shared/node-types.md`](../node-types.md)
-- [`loopback-connector-googletranslate/descriptors/googletranslate.json`](../loopback-connector-googletranslate/descriptors/googletranslate.json)
-- [`loopback-connector-googletranslate/descriptors/googletranslate.yaml`](../loopback-connector-googletranslate/descriptors/googletranslate.yaml)
-- [`loopback-connector-googletranslate/lib/openapi/connector.json`](../loopback-connector-googletranslate/lib/openapi/connector.json)
-- [`appconnect-connector-googletranslate/lib/openapi/connector.json`](../appconnect-connector-googletranslate/lib/openapi/connector.json)
-- [`EveryPolicy/googletranslate.policyxml`](../EveryPolicy/googletranslate.policyxml)

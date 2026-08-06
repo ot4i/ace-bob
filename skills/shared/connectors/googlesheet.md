@@ -34,15 +34,14 @@ The following combination is allowed for Google Sheets Input nodes:
 
 ## Policy requirements
 - Create policies in an ACE Policy project, not in an Application project.
-- A suitable default policy reference is similar to `{DiscoveryConnectorPolicyProject}:googlesheet`.
-- The policy file is available at `EveryPolicy/googlesheet.policyxml`.
+- A suitable default policy reference is similar to `{DiscoveryConnectorPolicyProject}:Googlesheet1`.
 - Note: this connector uses `authenticationMethod="BASIC_OAUTH"`. It also supports `OAUTH2_WEB` authentication.
 
 ## Example policy
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <policies>
-  <policy longDescription="" policyName="googlesheet" policyTemplate="online_v1_basic_oauth" policyType="googlesheet" shortDescription="" version="">
+  <policy longDescription="" policyName="Googlesheet1" policyTemplate="online_v1_basic_oauth" policyType="googlesheet" shortDescription="" version="">
      <credentialName/>
      <applicationVersion>v1</applicationVersion>
      <applicationType>online</applicationType>
@@ -59,7 +58,3 @@ The following combination is allowed for Google Sheets Input nodes:
 ## Related files
 - [`skills/shared/connector-index.md`](../connector-index.md)
 - [`skills/shared/node-types.md`](../node-types.md)
-- [`loopback-connector-googlespreadsheetevent/descriptors/googlespreadsheetevent.json`](../loopback-connector-googlespreadsheetevent/descriptors/googlespreadsheetevent.json)
-- [`loopback-connector-googlespreadsheetevent/descriptors/metadata.json`](../loopback-connector-googlespreadsheetevent/descriptors/metadata.json)
-- [`loopback-connector-googlespreadsheetevent/lib/googlesheets_constant.json`](../loopback-connector-googlespreadsheetevent/lib/googlesheets_constant.json)
-- [`EveryPolicy/googlesheet.policyxml`](../EveryPolicy/googlesheet.policyxml)
