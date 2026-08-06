@@ -49,15 +49,13 @@ The following combinations are allowed for Google BigQuery Request nodes:
 
 ## Policy requirements
 - Create policies in an ACE Policy project, not in an Application project.
-- A suitable default policy reference is similar to `{DiscoveryConnectorPolicyProject}:googlebigquery`.
-- The policy file is available at `EveryPolicy/googlebigquery.policyxml`.
-- Note: this connector uses `authenticationMethod="BASIC"` with service account credentials (client email and private key) rather than OAuth. The policy also requires `<projectId/>` and `<datasetId/>` fields.
+- A suitable default policy reference is similar to `{DiscoveryConnectorPolicyProject}:Googlebigquery1`.
 
 ## Example policy
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <policies>
-  <policy longDescription="" policyName="googlebigquery" policyTemplate="online_v1_basic" policyType="googlebigquery" shortDescription="" version="">
+  <policy longDescription="" policyName="Googlebigquery1" policyTemplate="online_v1_basic" policyType="googlebigquery" shortDescription="" version="">
      <credentialName/>
      <applicationVersion>v1</applicationVersion>
      <applicationType>online</applicationType>
@@ -76,14 +74,3 @@ The following combinations are allowed for Google BigQuery Request nodes:
 ## Related files
 - [`skills/shared/connector-index.md`](../connector-index.md)
 - [`skills/shared/node-types.md`](../node-types.md)
-- [`loopback-connector-googlebigquery/descriptors/googlebigquery.json`](../loopback-connector-googlebigquery/descriptors/googlebigquery.json)
-- [`loopback-connector-googlebigquery/descriptors/googlebigquery.yaml`](../loopback-connector-googlebigquery/descriptors/googlebigquery.yaml)
-- [`loopback-connector-googlebigquery/lib/models/objects.json`](../loopback-connector-googlebigquery/lib/models/objects.json)
-- [`loopback-connector-googlebigquery/lib/models/table.json`](../loopback-connector-googlebigquery/lib/models/table.json)
-- [`loopback-connector-googlebigquery/lib/models/view.json`](../loopback-connector-googlebigquery/lib/models/view.json)
-- [`loopback-connector-googlebigquery/lib/models/dataset.json`](../loopback-connector-googlebigquery/lib/models/dataset.json)
-- [`loopback-connector-googlebigquery/lib/models/job.json`](../loopback-connector-googlebigquery/lib/models/job.json)
-- [`loopback-connector-googlebigquery/lib/models/sql.json`](../loopback-connector-googlebigquery/lib/models/sql.json)
-- [`loopback-connector-googlebigquery/lib/models/project.json`](../loopback-connector-googlebigquery/lib/models/project.json)
-- [`loopback-connector-googlebigquery/lib/googlebigqueryConstants.json`](../loopback-connector-googlebigquery/lib/googlebigqueryConstants.json)
-- [`EveryPolicy/googlebigquery.policyxml`](../EveryPolicy/googlebigquery.policyxml)

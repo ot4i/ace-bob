@@ -54,14 +54,13 @@ The following combinations are allowed for Google Contacts Request nodes:
 
 ## Policy requirements
 - Create policies in an ACE Policy project, not in an Application project.
-- A suitable default policy reference is similar to `{DiscoveryConnectorPolicyProject}:googlecontacts`.
-- The policy file is available at `EveryPolicy/googlecontacts.policyxml`.
+- A suitable default policy reference is similar to `{DiscoveryConnectorPolicyProject}:Googlecontacts1`.
 
 ## Example policy
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <policies>
-  <policy longDescription="" policyName="googlecontacts" policyTemplate="online_v1_basic_oauth" policyType="googlecontacts" shortDescription="" version="">
+  <policy longDescription="" policyName="Googlecontacts1" policyTemplate="online_v1_basic_oauth" policyType="googlecontacts" shortDescription="" version="">
      <credentialName/>
      <applicationVersion>v1</applicationVersion>
      <applicationType>online</applicationType>
@@ -78,9 +77,3 @@ The following combinations are allowed for Google Contacts Request nodes:
 ## Related files
 - [`skills/shared/connector-index.md`](../connector-index.md)
 - [`skills/shared/node-types.md`](../node-types.md)
-- [`loopback-connector-googlecontacts/descriptors/googlecontacts.json`](../loopback-connector-googlecontacts/descriptors/googlecontacts.json)
-- [`loopback-connector-googlecontacts/descriptors/googlecontacts.yaml`](../loopback-connector-googlecontacts/descriptors/googlecontacts.yaml)
-- [`loopback-connector-googlecontacts/lib/openapi/connector.json`](../loopback-connector-googlecontacts/lib/openapi/connector.json)
-- [`loopback-connector-googlecontacts/lib/constants.json`](../loopback-connector-googlecontacts/lib/constants.json)
-- [`appconnect-connector-googlecontacts/lib/openapi/connector.json`](../appconnect-connector-googlecontacts/lib/openapi/connector.json)
-- [`EveryPolicy/googlecontacts.policyxml`](../EveryPolicy/googlecontacts.policyxml)

@@ -100,15 +100,14 @@ The following combinations are allowed for Google Drive Request nodes:
 
 ## Policy requirements
 - Create policies in an ACE Policy project, not in an Application project.
-- A suitable default policy reference is similar to `{DiscoveryConnectorPolicyProject}:googledrive`.
-- The policy file is available at `EveryPolicy/googledrive.policyxml`.
+- A suitable default policy reference is similar to `{DiscoveryConnectorPolicyProject}:Googledrive1`.
 - Note: this connector uses `applicationType="business"` and `policyTemplate="business_v1_basic_oauth"`, which differs from most other Google connectors. The policy also includes an `<apiVersion>` field (default `v3`).
 
 ## Example policy
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <policies>
-  <policy longDescription="" policyName="googledrive" policyTemplate="business_v1_basic_oauth" policyType="googledrive" shortDescription="" version="">
+  <policy longDescription="" policyName="Googledrive1" policyTemplate="business_v1_basic_oauth" policyType="googledrive" shortDescription="" version="">
      <credentialName/>
      <applicationVersion>v1</applicationVersion>
      <applicationType>business</applicationType>
@@ -126,14 +125,3 @@ The following combinations are allowed for Google Drive Request nodes:
 ## Related files
 - [`skills/shared/connector-index.md`](../connector-index.md)
 - [`skills/shared/node-types.md`](../node-types.md)
-- [`loopback-connector-googledrive/descriptors/googledrive.json`](../loopback-connector-googledrive/descriptors/googledrive.json)
-- [`loopback-connector-googledrive/descriptors/googledrive.yaml`](../loopback-connector-googledrive/descriptors/googledrive.yaml)
-- [`loopback-connector-googledrive/lib/models/driveObjects.json`](../loopback-connector-googledrive/lib/models/driveObjects.json)
-- [`loopback-connector-googledrive/lib/models/wdsObjects.json`](../loopback-connector-googledrive/lib/models/wdsObjects.json)
-- [`loopback-connector-googledrive/lib/models/businessObjects.json`](../loopback-connector-googledrive/lib/models/businessObjects.json)
-- [`loopback-connector-googledrive/lib/models/calendars.json`](../loopback-connector-googledrive/lib/models/calendars.json)
-- [`loopback-connector-googledrive/lib/models/photos.json`](../loopback-connector-googledrive/lib/models/photos.json)
-- [`loopback-connector-googledrive/lib/models/roles.json`](../loopback-connector-googledrive/lib/models/roles.json)
-- [`loopback-connector-googledrive/lib/models/roleassignments.json`](../loopback-connector-googledrive/lib/models/roleassignments.json)
-- [`loopback-connector-googledrive/lib/googledrive_constant.json`](../loopback-connector-googledrive/lib/googledrive_constant.json)
-- [`EveryPolicy/googledrive.policyxml`](../EveryPolicy/googledrive.policyxml)

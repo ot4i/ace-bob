@@ -110,14 +110,13 @@ The following combination is allowed for Gmail Input nodes:
 
 ## Policy requirements
 - Create policies in an ACE Policy project, not in an Application project.
-- A suitable default policy reference is similar to `{DiscoveryConnectorPolicyProject}:gmail`.
-- The policy file is available at `EveryPolicy/gmail.policyxml`.
+- A suitable default policy reference is similar to `{DiscoveryConnectorPolicyProject}:Gmail1`.
 
 ## Example policy
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <policies>
-  <policy longDescription="" policyName="gmail" policyTemplate="online_v1_basic_oauth" policyType="gmail" shortDescription="" version="">
+  <policy longDescription="" policyName="Gmail1" policyTemplate="online_v1_basic_oauth" policyType="gmail" shortDescription="" version="">
      <credentialName/>
      <applicationVersion>v1</applicationVersion>
      <applicationType>online</applicationType>
@@ -134,11 +133,3 @@ The following combination is allowed for Gmail Input nodes:
 ## Related files
 - [`skills/shared/connector-index.md`](../connector-index.md)
 - [`skills/shared/node-types.md`](../node-types.md)
-- [`loopback-connector-gmail/descriptors/gmail.json`](../loopback-connector-gmail/descriptors/gmail.json)
-- [`loopback-connector-gmail/lib/models/objects.json`](../loopback-connector-gmail/lib/models/objects.json)
-- [`loopback-connector-gmail/lib/models/mail.json`](../loopback-connector-gmail/lib/models/mail.json)
-- [`loopback-connector-gmailevent/descriptors/gmailevent.json`](../loopback-connector-gmailevent/descriptors/gmailevent.json)
-- [`loopback-connector-gmailevent/lib/models/mail.json`](../loopback-connector-gmailevent/lib/models/mail.json)
-- [`appconnect-connector-gmail/descriptors/gmail.json`](../appconnect-connector-gmail/descriptors/gmail.json)
-- [`appconnect-connector-gmail/lib/openapi/connector.json`](../appconnect-connector-gmail/lib/openapi/connector.json)
-- [`EveryPolicy/gmail.policyxml`](../EveryPolicy/gmail.policyxml)

@@ -53,15 +53,14 @@ The following combination is allowed for Google Cloud Pub/Sub Input nodes:
 
 ## Policy requirements
 - Create policies in an ACE Policy project, not in an Application project.
-- A suitable default policy reference is similar to `{DiscoveryConnectorPolicyProject}:googlepubsub`.
-- The policy file is available at `EveryPolicy/googlepubsub.policyxml`.
+- A suitable default policy reference is similar to `{DiscoveryConnectorPolicyProject}:Googlepubsub1`.
 - Note: this connector uses `authenticationMethod="BASIC"` with service account credentials (client email and private key). The policy requires a `<projectId/>` field and does not include a `<proxyId/>` field.
 
 ## Example policy
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <policies>
-  <policy longDescription="" policyName="googlepubsub" policyTemplate="online_v1_basic" policyType="googlepubsub" shortDescription="" version="">
+  <policy longDescription="" policyName="Googlepubsub1" policyTemplate="online_v1_basic" policyType="googlepubsub" shortDescription="" version="">
      <credentialName/>
      <applicationVersion>v1</applicationVersion>
      <applicationType>online</applicationType>
@@ -78,15 +77,3 @@ The following combination is allowed for Google Cloud Pub/Sub Input nodes:
 ## Related files
 - [`skills/shared/connector-index.md`](../connector-index.md)
 - [`skills/shared/node-types.md`](../node-types.md)
-- [`loopback-connector-googlepubsub/descriptors/googlepubsub.json`](../loopback-connector-googlepubsub/descriptors/googlepubsub.json)
-- [`loopback-connector-googlepubsub/descriptors/googlepubsub.yaml`](../loopback-connector-googlepubsub/descriptors/googlepubsub.yaml)
-- [`loopback-connector-googlepubsub/lib/models/objects.json`](../loopback-connector-googlepubsub/lib/models/objects.json)
-- [`loopback-connector-googlepubsub/lib/models/topic.json`](../loopback-connector-googlepubsub/lib/models/topic.json)
-- [`loopback-connector-googlepubsub/lib/models/subscription.json`](../loopback-connector-googlepubsub/lib/models/subscription.json)
-- [`loopback-connector-googlepubsub/lib/models/message.json`](../loopback-connector-googlepubsub/lib/models/message.json)
-- [`loopback-connector-googlepubsub/lib/models/newmessage.json`](../loopback-connector-googlepubsub/lib/models/newmessage.json)
-- [`loopback-connector-googlepubsubevent/descriptors/googlepubsubevent.json`](../loopback-connector-googlepubsubevent/descriptors/googlepubsubevent.json)
-- [`loopback-connector-googlepubsubevent/lib/models/newmessage.json`](../loopback-connector-googlepubsubevent/lib/models/newmessage.json)
-- [`loopback-connector-googlepubsubevent/lib/models/subscription.json`](../loopback-connector-googlepubsubevent/lib/models/subscription.json)
-- [`loopback-connector-googlepubsubevent/lib/models/topic.json`](../loopback-connector-googlepubsubevent/lib/models/topic.json)
-- [`EveryPolicy/googlepubsub.policyxml`](../EveryPolicy/googlepubsub.policyxml)

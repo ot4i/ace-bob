@@ -47,15 +47,14 @@ The following combinations are allowed for Google Groups Request nodes:
 
 ## Policy requirements
 - Create policies in an ACE Policy project, not in an Application project.
-- A suitable default policy reference is similar to `{DiscoveryConnectorPolicyProject}:googlegroups`.
-- The policy file is available at `EveryPolicy/googlegroups.policyxml`.
+- A suitable default policy reference is similar to `{DiscoveryConnectorPolicyProject}:Googlegroups1`.
 - Note: this connector uses `authenticationMethod="BASIC_API_KEY"` with service account credentials (user email, service account email, and private key). It also supports `BASIC_OAUTH` and `OAUTH2_WEB` authentication.
 
 ## Example policy
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <policies>
-  <policy longDescription="" policyName="googlegroups" policyTemplate="online_v1_basic_api_key" policyType="googlegroups" shortDescription="" version="">
+  <policy longDescription="" policyName="Googlegroups1" policyTemplate="online_v1_basic_api_key" policyType="googlegroups" shortDescription="" version="">
      <credentialName/>
      <applicationVersion>v1</applicationVersion>
      <applicationType>online</applicationType>
@@ -72,9 +71,3 @@ The following combinations are allowed for Google Groups Request nodes:
 ## Related files
 - [`skills/shared/connector-index.md`](../connector-index.md)
 - [`skills/shared/node-types.md`](../node-types.md)
-- [`loopback-connector-googlegroups/descriptors/googlegroups.json`](../loopback-connector-googlegroups/descriptors/googlegroups.json)
-- [`loopback-connector-googlegroups/descriptors/googlegroups.yaml`](../loopback-connector-googlegroups/descriptors/googlegroups.yaml)
-- [`loopback-connector-googlegroups/lib/openapi/connector.json`](../loopback-connector-googlegroups/lib/openapi/connector.json)
-- [`loopback-connector-googlegroups/lib/constants.json`](../loopback-connector-googlegroups/lib/constants.json)
-- [`appconnect-connector-googlegroups/lib/openapi/connector.json`](../appconnect-connector-googlegroups/lib/openapi/connector.json)
-- [`EveryPolicy/googlegroups.policyxml`](../EveryPolicy/googlegroups.policyxml)

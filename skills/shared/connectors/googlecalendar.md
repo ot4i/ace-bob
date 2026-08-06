@@ -87,13 +87,3 @@ The following combinations are allowed for Google Calendar Request nodes:
 ## Related files
 - [`skills/shared/connector-index.md`](../connector-index.md)
 - [`skills/shared/node-types.md`](../node-types.md)
-- [`loopback-connector-googlecalendar/descriptors/googlecalendar.json`](../loopback-connector-googlecalendar/descriptors/googlecalendar.json)
-- [`loopback-connector-googlecalendar/descriptors/googlecalendar.yaml`](../loopback-connector-googlecalendar/descriptors/googlecalendar.yaml)
-- [`loopback-connector-googlecalendar/lib/models/objects.json`](../loopback-connector-googlecalendar/lib/models/objects.json)
-- [`loopback-connector-googlecalendar/lib/models/events.json`](../loopback-connector-googlecalendar/lib/models/events.json)
-- [`loopback-connector-googlecalendar/lib/models/calendars.json`](../loopback-connector-googlecalendar/lib/models/calendars.json)
-- [`loopback-connector-googlecalendar/lib/models/calendarlist.json`](../loopback-connector-googlecalendar/lib/models/calendarlist.json)
-- [`loopback-connector-googlecalendar/lib/models/calendarsharing.json`](../loopback-connector-googlecalendar/lib/models/calendarsharing.json)
-- [`loopback-connector-googlecalendar/lib/models/recurringevents.json`](../loopback-connector-googlecalendar/lib/models/recurringevents.json)
-- [`loopback-connector-googlecalendar/lib/util/googleCalendarConstants.json`](../loopback-connector-googlecalendar/lib/util/googleCalendarConstants.json)
-- [`EveryPolicy/googlecalendar.policyxml`](../EveryPolicy/googlecalendar.policyxml)
