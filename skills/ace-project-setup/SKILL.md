@@ -18,6 +18,8 @@ Use this skill when the user asks to create or modify ACE Toolkit Application pr
 3. [`skills/shared/ace-projects.md`](../shared/ace-projects.md)
 4. [`skills/shared/policy-projects.md`](../shared/policy-projects.md)
 5. [`skills/shared/review-checklist.md`](../shared/review-checklist.md)
+6. [`skills/shared/esql-guidelines.md`](../shared/esql-guidelines.md)
+7. [`skills/shared/java-guidelines.md`](../shared/java-guidelines.md)
 
 ## Critical rules
 - Create the correct ACE Toolkit project type for the requested task.
