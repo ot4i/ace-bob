@@ -34,6 +34,9 @@ Use this skill when the user asks to create or modify `.esql` files for ACE Comp
 - For XMLNSC-to-JSON array traversal, use `DECLARE ... REFERENCE TO ...[1]` with `WHILE LASTMOVE(...)` and `MOVE ... NEXTSIBLING NAME '...'`; do not use `FOR ... AS path[] DO`.
 - Before populating any JSON array, create it explicitly with `CREATE FIELD ... IDENTITY (JSON.Array)`.
 - When reading scalar values from XMLNSC for output to JSON, always use `FIELDVALUE(...)` rather than assigning the XML field reference directly.
+- If a user provides an ESQL file that contains a BROKER SCHEMA declaration, you MUST ensure that the ESQL file is placed in a subdirectory of the project of the correct name
+- For example, if an ESQL file named `Example.esql` has a declaration `BROKER SCHEMA com.ibm.dev.test` and it is to be placed inside a Shared Library project named `ExampleSharedLibrary`, 
+then within ExampleSharedLibrary there must be a subdirectory structure of `com/ibm/dev/test/Example.esql`
 
 ## Output requirements
 - Create or update the requested ESQL artifacts.

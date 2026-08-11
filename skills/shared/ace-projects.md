@@ -338,11 +338,12 @@ An ACE Toolkit REST API project must contain:
 ```
 
 ## When to Create a Shared Library or a Static Library Project
-- If the user asks to create a project for sharing resources across many applications then create either a new SharedLibrary project or a new Library project.
+- If the user asks to create a project for sharing resources across many applications then create either a new Shared Library project or a new Static Library project.
 - If the user does not provide a project name, ask them for one.
 - If you use a shared library and then if a shared library is updated, the changes are immediately picked up by all referencing applications.
 - If you use a static library to contain resources, then each application that references that static library is deployed with its own private copy of that library.
 - If a static library is updated, each application that references it must be repackaged and redeployed with the updated static library.
+- If the shared library will contain ESQL files, you MUST also consult `skills/ace-esql/SKILL.md` for ESQL file placement rules based on BROKER SCHEMA declarations.
 
 ## Required Files in Shared Library Projects
 An ACE Toolkit Shared Library project must contain:
