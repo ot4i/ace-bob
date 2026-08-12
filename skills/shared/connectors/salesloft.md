@@ -28,36 +28,36 @@ For Salesloft Request nodes:
 ## Allowed operations
 The following combinations are allowed for Salesloft Request nodes:
 
-- `summary="Retrieve users"` `action="retrievewithwhere"` `model="Users"`
-- `summary="Retrieve user by ID"` `action="retrieve"` `model="Users"`
-- `summary="Update user"` `action="update"` `model="Users"`
-- `summary="Retrieve accounts"` `action="retrievewithwhere"` `model="Accounts"`
-- `summary="Create account"` `action="create"` `model="Accounts"`
-- `summary="Retrieve account by ID"` `action="retrieve"` `model="Accounts"`
-- `summary="Update account"` `action="update"` `model="Accounts"`
-- `summary="Delete account"` `action="delete"` `model="Accounts"`
-- `summary="Retrieve people"` `action="retrievewithwhere"` `model="People"`
-- `summary="Create person"` `action="create"` `model="People"`
-- `summary="Retrieve person by ID"` `action="retrieve"` `model="People"`
-- `summary="Update person"` `action="update"` `model="People"`
-- `summary="Delete person"` `action="delete"` `model="People"`
-- `summary="Retrieve cadences"` `action="retrievewithwhere"` `model="Cadences"`
-- `summary="Retrieve cadence by ID"` `action="retrieve"` `model="Cadences"`
-- `summary="Retrieve cadence memberships"` `action="retrievewithwhere"` `model="Cadence memberships"`
-- `summary="Create cadence membership"` `action="create"` `model="Cadence memberships"`
-- `summary="Retrieve cadence membership by ID"` `action="retrieve"` `model="Cadence memberships"`
-- `summary="Delete cadence membership"` `action="delete"` `model="Cadence memberships"`
-- `summary="Create cadence memberships in bulk"` `action="custom"` `model="Cadence memberships"`
-- `summary="Import cadence"` `action="create"` `model="Cadence imports"`
-- `summary="Export cadence"` `action="retrieve"` `model="Cadence exports"`
-- `summary="Retrieve calls"` `action="retrievewithwhere"` `model="Calls"`
-- `summary="Create call"` `action="create"` `model="Calls"`
-- `summary="Retrieve call by ID"` `action="retrieve"` `model="Calls"`
-- `summary="Retrieve emails"` `action="retrievewithwhere"` `model="Emails"`
-- `summary="Retrieve email by ID"` `action="retrieve"` `model="Emails"`
-- `summary="Retrieve notes"` `action="retrievewithwhere"` `model="Notes"`
-- `summary="Create note"` `action="create"` `model="Notes"`
-- `summary="Retrieve note by ID"` `action="retrieve"` `model="Notes"`
+- `displayName="Retrieve users"` `action="retrievewithwhere"` `businessObject="Users"`
+- `displayName="Retrieve user by ID"` `action="retrieve"` `businessObject="Users"`
+- `displayName="Update user"` `action="update"` `businessObject="Users"`
+- `displayName="Retrieve accounts"` `action="retrievewithwhere"` `businessObject="Accounts"`
+- `displayName="Create account"` `action="create"` `businessObject="Accounts"`
+- `displayName="Retrieve account by ID"` `action="retrieve"` `businessObject="Accounts"`
+- `displayName="Update account"` `action="update"` `businessObject="Accounts"`
+- `displayName="Delete account"` `action="delete"` `businessObject="Accounts"`
+- `displayName="Retrieve people"` `action="retrievewithwhere"` `businessObject="People"`
+- `displayName="Create person"` `action="create"` `businessObject="People"`
+- `displayName="Retrieve person by ID"` `action="retrieve"` `businessObject="People"`
+- `displayName="Update person"` `action="update"` `businessObject="People"`
+- `displayName="Delete person"` `action="delete"` `businessObject="People"`
+- `displayName="Retrieve cadences"` `action="retrievewithwhere"` `businessObject="Cadences"`
+- `displayName="Retrieve cadence by ID"` `action="retrieve"` `businessObject="Cadences"`
+- `displayName="Retrieve cadence memberships"` `action="retrievewithwhere"` `businessObject="Cadence memberships"`
+- `displayName="Create cadence membership"` `action="create"` `businessObject="Cadence memberships"`
+- `displayName="Retrieve cadence membership by ID"` `action="retrieve"` `businessObject="Cadence memberships"`
+- `displayName="Delete cadence membership"` `action="delete"` `businessObject="Cadence memberships"`
+- `displayName="Create cadence memberships in bulk"` `action="custom"` `businessObject="Cadence memberships"`
+- `displayName="Import cadence"` `action="create"` `businessObject="Cadence imports"`
+- `displayName="Export cadence"` `action="retrieve"` `businessObject="Cadence exports"`
+- `displayName="Retrieve calls"` `action="retrievewithwhere"` `businessObject="Calls"`
+- `displayName="Create call"` `action="create"` `businessObject="Calls"`
+- `displayName="Retrieve call by ID"` `action="retrieve"` `businessObject="Calls"`
+- `displayName="Retrieve emails"` `action="retrievewithwhere"` `businessObject="Emails"`
+- `displayName="Retrieve email by ID"` `action="retrieve"` `businessObject="Emails"`
+- `displayName="Retrieve notes"` `action="retrievewithwhere"` `businessObject="Notes"`
+- `displayName="Create note"` `action="create"` `businessObject="Notes"`
+- `displayName="Retrieve note by ID"` `action="retrieve"` `businessObject="Notes"`
 
 ## Policy requirements
 - Create policies in an ACE Policy project, not in an Application project.

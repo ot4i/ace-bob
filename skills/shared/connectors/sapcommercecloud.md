@@ -28,64 +28,64 @@ For SAP Commerce Cloud Request nodes:
 ## Allowed operations
 The following combinations are allowed for SAP Commerce Cloud Request nodes:
 
-- `summary="Retrieve base sites"` `action="retrievewithwhere"` `model="Base sites"`
-- `summary="Retrieve payment card types"` `action="retrievewithwhere"` `model="Payment card types"`
-- `summary="Retrieve catalogs"` `action="retrievewithwhere"` `model="Catalogs"`
-- `summary="Retrieve catalog"` `action="retrieve"` `model="Catalogs"`
-- `summary="Retrieve catalog version"` `action="retrieve"` `model="Catalogs"`
-- `summary="Retrieve category"` `action="retrieve"` `model="Catalogs"`
-- `summary="Retrieve cost centers"` `action="retrievewithwhere"` `model="Cost centers"`
-- `summary="Create cost center"` `action="create"` `model="Cost centers"`
-- `summary="Retrieve cost center"` `action="retrieve"` `model="Cost centers"`
-- `summary="Update cost center"` `action="update"` `model="Cost centers"`
-- `summary="Retrieve countries"` `action="retrievewithwhere"` `model="Countries"`
-- `summary="Retrieve regions"` `action="retrievewithwhere"` `model="Countries"`
-- `summary="Retrieve currencies"` `action="retrievewithwhere"` `model="Currencies"`
-- `summary="Retrieve customer groups"` `action="retrievewithwhere"` `model="Customer groups"`
-- `summary="Create customer group"` `action="create"` `model="Customer groups"`
-- `summary="Retrieve customer group by group ID"` `action="retrieve"` `model="Customer groups"`
-- `summary="Assign customer group members"` `action="update"` `model="Customer groups"`
-- `summary="Delete customer group member"` `action="delete"` `model="Customer groups"`
-- `summary="Retrieve customer groups by user ID"` `action="retrievewithwhere"` `model="Customer groups"`
-- `summary="Retrieve languages"` `action="retrievewithwhere"` `model="Languages"`
-- `summary="Retrieve order"` `action="retrieve"` `model="Orders"`
-- `summary="Create order"` `action="create"` `model="Orders"`
-- `summary="Retrieve products"` `action="retrievewithwhere"` `model="Products"`
-- `summary="Retrieve product"` `action="retrieve"` `model="Products"`
-- `summary="Retrieve product references"` `action="retrievewithwhere"` `model="Products"`
-- `summary="Retrieve product reviews"` `action="retrievewithwhere"` `model="Products"`
-- `summary="Retrieve product stock"` `action="retrievewithwhere"` `model="Products"`
-- `summary="Retrieve product stock for store"` `action="retrieve"` `model="Products"`
-- `summary="Retrieve store locations"` `action="retrievewithwhere"` `model="Stores"`
-- `summary="Retrieve stores by country"` `action="retrievewithwhere"` `model="Stores"`
-- `summary="Retrieve stores by country and region"` `action="retrievewithwhere"` `model="Stores"`
-- `summary="Retrieve store counts"` `action="retrievewithwhere"` `model="Stores"`
-- `summary="Retrieve store location by name"` `action="retrieve"` `model="Stores"`
-- `summary="Retrieve customer profile"` `action="retrieve"` `model="Customers"`
-- `summary="Delete customer profile"` `action="delete"` `model="Customers"`
-- `summary="Update customer profile"` `action="update"` `model="Customers"`
-- `summary="Retrieve customer addresses"` `action="retrievewithwhere"` `model="Addresses"`
-- `summary="Create customer address"` `action="create"` `model="Addresses"`
-- `summary="Retrieve customer address"` `action="retrieve"` `model="Addresses"`
-- `summary="Delete customer address"` `action="delete"` `model="Addresses"`
-- `summary="Update customer address"` `action="update"` `model="Addresses"`
-- `summary="Retrieve user carts"` `action="retrievewithwhere"` `model="Carts"`
-- `summary="Create user cart"` `action="create"` `model="Carts"`
-- `summary="Retrieve user cart"` `action="retrieve"` `model="Carts"`
-- `summary="Delete user cart"` `action="delete"` `model="Carts"`
-- `summary="Retrieve cart pickup options"` `action="retrievewithwhere"` `model="Carts"`
-- `summary="Apply cart voucher"` `action="custom"` `model="Cart promotions"`
-- `summary="Retrieve cart vouchers"` `action="retrievewithwhere"` `model="Cart promotions"`
-- `summary="Delete cart voucher"` `action="delete"` `model="Cart promotions"`
-- `summary="Retrieve cart delivery modes"` `action="retrieve"` `model="Cart delivery modes"`
-- `summary="Update cart delivery mode"` `action="update"` `model="Cart delivery modes"`
-- `summary="Delete cart delivery mode"` `action="delete"` `model="Cart delivery modes"`
-- `summary="Retrieve cart entries"` `action="retrievewithwhere"` `model="Cart entries"`
-- `summary="Create cart entry"` `action="create"` `model="Cart entries"`
-- `summary="Retrieve cart entry"` `action="retrieve"` `model="Cart entries"`
-- `summary="Delete cart entry"` `action="delete"` `model="Cart entries"`
-- `summary="Update cart entry"` `action="update"` `model="Cart entries"`
-- `summary="Retrieve customer payment details"` `action="retrievewithwhere"` `model="Payment details"`
+- `displayName="Retrieve base sites"` `action="retrievewithwhere"` `businessObject="Base sites"`
+- `displayName="Retrieve payment card types"` `action="retrievewithwhere"` `businessObject="Payment card types"`
+- `displayName="Retrieve catalogs"` `action="retrievewithwhere"` `businessObject="Catalogs"`
+- `displayName="Retrieve catalog"` `action="retrieve"` `businessObject="Catalogs"`
+- `displayName="Retrieve catalog version"` `action="retrieve"` `businessObject="Catalogs"`
+- `displayName="Retrieve category"` `action="retrieve"` `businessObject="Catalogs"`
+- `displayName="Retrieve cost centers"` `action="retrievewithwhere"` `businessObject="Cost centers"`
+- `displayName="Create cost center"` `action="create"` `businessObject="Cost centers"`
+- `displayName="Retrieve cost center"` `action="retrieve"` `businessObject="Cost centers"`
+- `displayName="Update cost center"` `action="update"` `businessObject="Cost centers"`
+- `displayName="Retrieve countries"` `action="retrievewithwhere"` `businessObject="Countries"`
+- `displayName="Retrieve regions"` `action="retrievewithwhere"` `businessObject="Countries"`
+- `displayName="Retrieve currencies"` `action="retrievewithwhere"` `businessObject="Currencies"`
+- `displayName="Retrieve customer groups"` `action="retrievewithwhere"` `businessObject="Customer groups"`
+- `displayName="Create customer group"` `action="create"` `businessObject="Customer groups"`
+- `displayName="Retrieve customer group by group ID"` `action="retrieve"` `businessObject="Customer groups"`
+- `displayName="Assign customer group members"` `action="update"` `businessObject="Customer groups"`
+- `displayName="Delete customer group member"` `action="delete"` `businessObject="Customer groups"`
+- `displayName="Retrieve customer groups by user ID"` `action="retrievewithwhere"` `businessObject="Customer groups"`
+- `displayName="Retrieve languages"` `action="retrievewithwhere"` `businessObject="Languages"`
+- `displayName="Retrieve order"` `action="retrieve"` `businessObject="Orders"`
+- `displayName="Create order"` `action="create"` `businessObject="Orders"`
+- `displayName="Retrieve products"` `action="retrievewithwhere"` `businessObject="Products"`
+- `displayName="Retrieve product"` `action="retrieve"` `businessObject="Products"`
+- `displayName="Retrieve product references"` `action="retrievewithwhere"` `businessObject="Products"`
+- `displayName="Retrieve product reviews"` `action="retrievewithwhere"` `businessObject="Products"`
+- `displayName="Retrieve product stock"` `action="retrievewithwhere"` `businessObject="Products"`
+- `displayName="Retrieve product stock for store"` `action="retrieve"` `businessObject="Products"`
+- `displayName="Retrieve store locations"` `action="retrievewithwhere"` `businessObject="Stores"`
+- `displayName="Retrieve stores by country"` `action="retrievewithwhere"` `businessObject="Stores"`
+- `displayName="Retrieve stores by country and region"` `action="retrievewithwhere"` `businessObject="Stores"`
+- `displayName="Retrieve store counts"` `action="retrievewithwhere"` `businessObject="Stores"`
+- `displayName="Retrieve store location by name"` `action="retrieve"` `businessObject="Stores"`
+- `displayName="Retrieve customer profile"` `action="retrieve"` `businessObject="Customers"`
+- `displayName="Delete customer profile"` `action="delete"` `businessObject="Customers"`
+- `displayName="Update customer profile"` `action="update"` `businessObject="Customers"`
+- `displayName="Retrieve customer addresses"` `action="retrievewithwhere"` `businessObject="Addresses"`
+- `displayName="Create customer address"` `action="create"` `businessObject="Addresses"`
+- `displayName="Retrieve customer address"` `action="retrieve"` `businessObject="Addresses"`
+- `displayName="Delete customer address"` `action="delete"` `businessObject="Addresses"`
+- `displayName="Update customer address"` `action="update"` `businessObject="Addresses"`
+- `displayName="Retrieve user carts"` `action="retrievewithwhere"` `businessObject="Carts"`
+- `displayName="Create user cart"` `action="create"` `businessObject="Carts"`
+- `displayName="Retrieve user cart"` `action="retrieve"` `businessObject="Carts"`
+- `displayName="Delete user cart"` `action="delete"` `businessObject="Carts"`
+- `displayName="Retrieve cart pickup options"` `action="retrievewithwhere"` `businessObject="Carts"`
+- `displayName="Apply cart voucher"` `action="custom"` `businessObject="Cart promotions"`
+- `displayName="Retrieve cart vouchers"` `action="retrievewithwhere"` `businessObject="Cart promotions"`
+- `displayName="Delete cart voucher"` `action="delete"` `businessObject="Cart promotions"`
+- `displayName="Retrieve cart delivery modes"` `action="retrieve"` `businessObject="Cart delivery modes"`
+- `displayName="Update cart delivery mode"` `action="update"` `businessObject="Cart delivery modes"`
+- `displayName="Delete cart delivery mode"` `action="delete"` `businessObject="Cart delivery modes"`
+- `displayName="Retrieve cart entries"` `action="retrievewithwhere"` `businessObject="Cart entries"`
+- `displayName="Create cart entry"` `action="create"` `businessObject="Cart entries"`
+- `displayName="Retrieve cart entry"` `action="retrieve"` `businessObject="Cart entries"`
+- `displayName="Delete cart entry"` `action="delete"` `businessObject="Cart entries"`
+- `displayName="Update cart entry"` `action="update"` `businessObject="Cart entries"`
+- `displayName="Retrieve customer payment details"` `action="retrievewithwhere"` `businessObject="Payment details"`
 
 ## Policy requirements
 - Create policies in an ACE Policy project, not in an Application project.

@@ -28,13 +28,13 @@ For Splunk Request nodes:
 ## Allowed operations
 The following combinations are allowed for Splunk Request nodes:
 
-- `summary="Retrieve all applications"` `action="retrievewithwhere"` `model="Applications"`
-- `summary="Retrieve HEC token by ID"` `action="retrievewithwhere"` `model="HTTP Event Collector (HEC)"`
-- `summary="Retrieve HEC token"` `action="retrievewithwhere"` `model="HTTP Event Collector (HEC)"`
-- `summary="Send HEC data"` `action="create"` `model="HTTP Event Collector (HEC)"`
-- `summary="Retrieve all users"` `action="retrievewithwhere"` `model="Users"`
-- `summary="Create search job"` `action="upsertwithwhere"` `model="Search"`
-- `summary="Retrieve searches by ID"` `action="retrievewithwhere"` `model="Search"`
+- `displayName="Retrieve all applications"` `action="retrievewithwhere"` `businessObject="Applications"`
+- `displayName="Retrieve HEC token by ID"` `action="retrievewithwhere"` `businessObject="HTTP Event Collector (HEC)"`
+- `displayName="Retrieve HEC token"` `action="retrievewithwhere"` `businessObject="HTTP Event Collector (HEC)"`
+- `displayName="Send HEC data"` `action="create"` `businessObject="HTTP Event Collector (HEC)"`
+- `displayName="Retrieve all users"` `action="retrievewithwhere"` `businessObject="Users"`
+- `displayName="Create search job"` `action="upsertwithwhere"` `businessObject="Search"`
+- `displayName="Retrieve searches by ID"` `action="retrievewithwhere"` `businessObject="Search"`
 
 ## Policy requirements
 - Create policies in an ACE Policy project, not in an Application project.
