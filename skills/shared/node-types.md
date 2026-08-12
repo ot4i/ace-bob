@@ -17,6 +17,10 @@ This document contains the canonical mapping from ACE node names to the `xmi:typ
 ---
 
 ## Subflow nodes
+- Subflow nodes are references to content defined in .subflow files
+- When an ACE Toolkit `.msgflow` file contains a subflow node, then the xmi:type of the subflow node is a reference to the actual .subflow such as `ExampleSubflow.subflow:FCMComposite_1`
+- If the subflow is located in a broker schema (subdirectory) then this should also be included in the xmi:type such as `ExampleBrokerSchema_ExampleSubflow.subflow:FCMComposite_1` where ExampleBrokerSchema is the name of the broker schema
+- There should then be an xmlns prefix declaration such as `xmlns:ExampleBrokerSchema_ExampleSubflow.subflow="ExampleBrokerSchema/ExampleSubflow.subflow"`
 - Subflow Input node → `xmi:type="eflow:FCMSource"`
 - Subflow Output node → `xmi:type="eflow:FCMSink"`
 

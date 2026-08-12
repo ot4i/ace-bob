@@ -27,6 +27,7 @@ Use this skill when the user asks to create or modify ACE Toolkit Application pr
 - Use the validated `.project`, `.settings`, and descriptor structures from the shared guidance.
 - If the request also includes message flow or Compute implementation work, continue with the relevant implementation skill after establishing the required project scaffolding.
 - If version-specific behavior matters and the ACE version is not known, ask the user.
+- If creating a Shared Library with subflows: subflows are placed in a named subdirectory (broker schema), NOT in the project root
 
 ## Output requirements
 - Create or update the requested project scaffolding artifacts.
