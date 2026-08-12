@@ -160,14 +160,15 @@ encoding/HTTPEchoApp=UTF-8
 Omitting this substitution causes the Toolkit warning: `Project '<name>' has no explicit encoding set`.
 
 ## `application.descriptor` Requirements for an Application project
-The `application.descriptor` file must exist in the project root and must use the following exact content — do not add `<reference>` entries:
-
+- The `application.descriptor` file must exist in the project root
+- Here is an example application.descriptor file:
 ```xml
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <ns2:appDescriptor xmlns="http://com.ibm.etools.mft.descriptor.base" xmlns:ns2="http://com.ibm.etools.mft.descriptor.app">
 <references/>
 </ns2:appDescriptor>
 ```
+- If the Application project needs to reference a shared library (for example named ExampleSharedLibrary) then you can add content within the `<references>` element like this: `<sharedLibraryReference><libraryName>ExampleSharedLibrary</libraryName></sharedLibraryReference>`
 
 ## When to Create a REST API Project
 - If the user asks for ACE to expose a REST API interface, or if the user provides a Swagger document or Open API document when describing the input data structure for a message flow, then create a new REST API project.
