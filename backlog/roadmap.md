@@ -13,7 +13,7 @@
  * Add discovery connectors from greenhouse to ibmzosconnect: [https://github.com/ot4i/ace-bob/pull/10]
  * Add discovery connectors from infobip to marketo:  [https://github.com/ot4i/ace-bob/pull/13]
  * Add Microsoft discovery connectors:  [https://github.com/ot4i/ace-bob/pull/14]
- * Add discovery connectors from milvus to salesforce: TO DO
+ * Add discovery connectors from milvus to salesforce:  [https://github.com/ot4i/ace-bob/pull/17]
  * Add discovery connectors from salesloft to twilio:  [https://github.com/ot4i/ace-bob/pull/15]
  * Add discovery connectors from UKG to zohorecruit:  [https://github.com/ot4i/ace-bob/pull/16]
 
