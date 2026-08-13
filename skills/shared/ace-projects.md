@@ -18,8 +18,10 @@ An ACE Toolkit Application project must contain:
 **Every one of these files must be created as explicit file output.** Do not describe the project structure in prose and omit any of them. If a file is listed here and not present in the output, the project is incomplete.
 
 ## `.project` File Requirements for an Application project
-
-**Use the following complete `.project` file verbatim.** Replace `<ProjectName>` with the actual project folder name. Do not add, remove, or modify any `<nature>` entries — the file must contain exactly the two natures shown and no others.
+- Below is an example `.project` file
+- Replace `<ProjectName>` with the actual project folder name. 
+- If the Application project needs to reference a shared library  (for example named `ExampleSharedLibrary`) then you must add content within the `<projects>` element like this: `<project>ExampleSharedLibrary</project>`
+- Do not add, remove, or modify any `<nature>` entries — the file must contain exactly the two natures shown and no others.
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -161,14 +163,14 @@ Omitting this substitution causes the Toolkit warning: `Project '<name>' has no 
 
 ## `application.descriptor` Requirements for an Application project
 - The `application.descriptor` file must exist in the project root
-- Here is an example application.descriptor file:
+- Below is an example `application.descriptor` file
+- If the Application project needs to reference a shared library (for example named ExampleSharedLibrary) then you must add content within the `<references>` element like this: `<sharedLibraryReference><libraryName>ExampleSharedLibrary</libraryName></sharedLibraryReference>`
 ```xml
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <ns2:appDescriptor xmlns="http://com.ibm.etools.mft.descriptor.base" xmlns:ns2="http://com.ibm.etools.mft.descriptor.app">
 <references/>
 </ns2:appDescriptor>
 ```
-- If the Application project needs to reference a shared library (for example named ExampleSharedLibrary) then you can add content within the `<references>` element like this: `<sharedLibraryReference><libraryName>ExampleSharedLibrary</libraryName></sharedLibraryReference>`
 
 ## When to Create a REST API Project
 - If the user asks for ACE to expose a REST API interface, or if the user provides a Swagger document or Open API document when describing the input data structure for a message flow, then create a new REST API project.

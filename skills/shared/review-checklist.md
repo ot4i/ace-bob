@@ -16,7 +16,6 @@ Use this checklist after generating or updating ACE artifacts and before finaliz
 When a new Application project is created, **all four of the following files must be present in the output** — not described in prose, actually created:
 - `.project` — contains **exactly 2 natures**: `com.ibm.etools.msgbroker.tooling.applicationNature` and `com.ibm.etools.msgbroker.tooling.messageBrokerProjectNature`. Do not add extra natures.
 - `.settings/org.eclipse.core.resources.prefs` — **must be created as a file**. The encoding key must use the actual project name — e.g. `encoding/HTTPEchoApp=UTF-8`. Using the literal text `<project>` causes the "no explicit encoding set" warning. A missing file causes "File not found" errors.
-- `application.descriptor` — must use the exact template from `ace-projects.md` with `<references/>`. Do not add `<reference>` child elements.
 - The `.msgflow` file(s) requested by the user.
 
 ### Project metadata — Policy projects
