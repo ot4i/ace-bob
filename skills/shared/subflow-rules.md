@@ -17,8 +17,8 @@ Use this document for generic subflow creation and review before consulting conn
 - Subflows are not allowed to just contain an Input node connected to an Output node
 - If no further content has been requested, include a Passthrough node in the subflow (connected between the Input and Output) with xmi:type of ComIbmPassthru.msgnode:FCMComposite_1
 - Every node added to a subflow must use the exact validated `xmi:type` value for that node.
-- When an ACE Toolkit `.msgflow` file references a subflow, if the subflow is located in a separate shared library then the xmi:type of the subflow node in the .msgflow must incorporate the name of the shared library.
-- For example if the subflow is named MySubflow.subflow and is located in shared library called MySharedLibrary then the xmi:type of the subflow node in the .msgflow should be `MySharedLibrary/MySubflow.subflow:FCMComposite_1`
+- When an ACE Toolkit `.msgflow` file references a subflow, if the subflow is located in a separate shared library then the xmi:type of the subflow node in the .msgflow must incorporate the name of the broker schema in which the .subflow is located in the shared library.
+- For example if the subflow is named `MySubflow.subflow` and is located in broker schema called `MyBrokerSchema` in shared library called `MySharedLibrary` then the xmi:type of the subflow node in the .msgflow should be `MyBrokerSchema/MySubflow.subflow:FCMComposite_1`
 - Do not invent namespace prefixes or node type names.
 - Do not rely on old example `.subflow` files as the source of truth for `xmi:type`.
 - Validate node type mappings against the ACE Message Flow schema for the relevant ACE version.
@@ -58,9 +58,9 @@ When creating `.msgflow` content in a REST API project note the example [`skills
 When creating `.subflow` content in a REST API project note the example [`skills/shared/ExampleAPI/createWidget.subflow`](createWidget.subflow), [`skills/shared/ExampleAPI/retrieveWidget.subflow`](retrieveWidget.subflow), [`skills/shared/ExampleAPI/updateWidget.subflow`](updateWidget.subflow), [`skills/shared/ExampleAPI/deleteWidget.subflow`](deleteWidget.subflow)
 
 ## Related files
+- [`skills/shared/review-checklist.md`](review-checklist.md)
 - [`skills/shared/ace-versions.md`](ace-versions.md)
 - [`skills/shared/node-types.md`](node-types.md)
-- [`skills/shared/review-checklist.md`](review-checklist.md)
 - [`skills/shared/ExampleApplication/Example.msgflow`]
 - [`skills/shared/ExampleAPI/gen/ExampleAPI.msgflow`]
 - [`skills/shared/ExampleAPI/createWidget.subflow`]
