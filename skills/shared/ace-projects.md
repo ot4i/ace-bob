@@ -145,21 +145,12 @@ An ACE Toolkit Application project must contain:
 ```
 
 ## `.settings` Requirements for an Application project
-The `.settings/org.eclipse.core.resources.prefs` file must contain:
+**The `.settings/org.eclipse.core.resources.prefs` file must contain the following exact content verbatim:**
 
 ```properties
 eclipse.preferences.version=1
 encoding/<project>=UTF-8
 ```
-
-**`<project>` is a placeholder — replace it with the actual project folder name.** For example, if the project is named `HTTPEchoApp`, the file must contain:
-
-```properties
-eclipse.preferences.version=1
-encoding/HTTPEchoApp=UTF-8
-```
-
-Omitting this substitution causes the Toolkit warning: `Project '<name>' has no explicit encoding set`.
 
 ## `application.descriptor` Requirements for an Application project
 - The `application.descriptor` file must exist in the project root
@@ -200,7 +191,7 @@ An ACE Toolkit REST API project must contain:
 
 ## `.project` File Requirements for a REST API project
 
-**Use the following complete `.project` file verbatim.** Replace `<ProjectName>` with the actual project folder name. Do not add, remove, or modify any `<nature>` entries — the file must contain exactly the two natures shown and no others.
+**Use the following example `.project` file.** Replace `<ProjectName>` with the actual project folder name. Do not add, remove, or modify any `<nature>` entries — the file must contain exactly the two natures shown and no others.
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -364,7 +355,7 @@ An ACE Toolkit Static Library project must contain:
 
 ## `.project` File Requirements for a Shared Library project
 
-**Use the following complete `.project` file verbatim.** Replace `<ProjectName>` with the actual project folder name. Do not add, remove, or modify any `<nature>` entries — the file must contain exactly the three natures shown and no others.
+**Use the following example `.project` file.** Replace `<ProjectName>` with the actual project folder name. Do not add, remove, or modify any `<nature>` entries — the file must contain exactly the three natures shown and no others.
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -503,7 +494,7 @@ An ACE Toolkit Static Library project must contain:
 </projectDescription>
 ```
 ## `.settings` Requirements for a Shared Library project
-The `.settings/org.eclipse.core.resources.prefs` file must contain:
+**The `.settings/org.eclipse.core.resources.prefs` file must contain the following exact content verbatim:**
 
 ```properties
 eclipse.preferences.version=1
@@ -522,7 +513,7 @@ encoding/<project>=UTF-8
 
 ## `.project` File Requirements for a Static Library project
 
-**Use the following complete `.project` file verbatim.** Replace `<ProjectName>` with the actual project folder name. Do not add, remove, or modify any `<nature>` entries — the file must contain exactly the two natures shown and no others.
+**Use the following example `.project` file.** Replace `<ProjectName>` with the actual project folder name. Do not add, remove, or modify any `<nature>` entries — the file must contain exactly the two natures shown and no others.
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -661,7 +652,7 @@ encoding/<project>=UTF-8
 ```
 
 ## `.settings` Requirements for a Static Library project
-The `.settings/org.eclipse.core.resources.prefs` file must contain:
+**The `.settings/org.eclipse.core.resources.prefs` file must contain the following exact content verbatim:**
 
 ```properties
 eclipse.preferences.version=1
@@ -669,7 +660,7 @@ encoding/<project>=UTF-8
 ```
 
 ## `library.descriptor` Requirements for a Static Library project
-** Use the following complete `library.descriptor` in the project root ** Replace `<ProjectName>` with the actual project folder name.
+** Use the following example `library.descriptor` in the project root ** Replace `<ProjectName>` with the actual project folder name.
 
 ```xml
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
