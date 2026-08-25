@@ -15,6 +15,12 @@ Use this document for generic message flow creation and review before consulting
 - Do not invent namespace prefixes or node type names.
 - Do not rely on old example `.msgflow` files as the source of truth for `xmi:type`.
 - Validate node type mappings against the ACE Message Flow schema for the relevant ACE version.
+- Within the .msgflow use a root tag name of `ecore:EPackage`
+- Within the `ecore:EPackage` element, the .msgflow should always carry the following hardcoded attribute values `xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:eflow="http://www.ibm.com/wbi/2005/eflow" xmlns:utility="http://www.ibm.com/wbi/2005/eflow_utility"`
+- Within the .msgflow create a child element of `ecore:EPackage` with name of `eClassifiers`
+- Within the `eClassifiers` element, create a child element with content `<eSuperTypes href="http://www.ibm.com/wbi/2005/eflow#//FCMBlock"/>`
+- Within the `.msgflow` use a `composition` element to contain multiple child elements named `nodes` and `connections`
+- Unless the user explicitly asks for square shaped message flow nodes rather than rectangles, when creating a `.msgflow` specify an attribute of `nodeLayoutStyle="RECTANGLE"` within the `eClassifiers` element.
 
 ## Node type reference
 Use [`skills/shared/node-types.md`](node-types.md) for the canonical node mapping list.
@@ -43,9 +49,9 @@ Before returning generated `.msgflow` content:
 - apply the common checks in [`skills/shared/review-checklist.md`](review-checklist.md)
 
 ## Examples 
-When creating `.msgflow` content in an Application project note the example [`skills/shared/ExampleApplication/Example.msgflow`](Example.msgflow)
-When creating `.msgflow` content in a REST API project note the example [`skills/shared/ExampleAPI/gen/ExampleAPI.msgflow`](ExampleAPI.msgflow)
-When creating `.subflow` content in a REST API project note the example [`skills/shared/ExampleAPI/createWidget.subflow`](createWidget.subflow), [`skills/shared/ExampleAPI/retrieveWidget.subflow`](retrieveWidget.subflow), [`skills/shared/ExampleAPI/updateWidget.subflow`](updateWidget.subflow), [`skills/shared/ExampleAPI/deleteWidget.subflow`](deleteWidget.subflow)
+- When creating `.msgflow` content in an Application project note the example [`skills/shared/ExampleApplication/Example.msgflow`](Example.msgflow)
+- When creating `.msgflow` content in a REST API project note the example [`skills/shared/ExampleAPI/gen/ExampleAPI.msgflow`](ExampleAPI.msgflow)
+- When creating `.subflow` content in a REST API project note the example [`skills/shared/ExampleAPI/createWidget.subflow`](createWidget.subflow), [`skills/shared/ExampleAPI/retrieveWidget.subflow`](retrieveWidget.subflow), [`skills/shared/ExampleAPI/updateWidget.subflow`](updateWidget.subflow), [`skills/shared/ExampleAPI/deleteWidget.subflow`](deleteWidget.subflow)
 
 ## Related files
 - [`skills/shared/ace-versions.md`](ace-versions.md)
