@@ -178,14 +178,18 @@ encoding/<project>=UTF-8
 - If using a Swagger 2.0 document and you are not told otherwise then by default the version should be set to 1.0.0
 - If using a Swagger 2.0 document and you are not told otherwise then by default the basePath should be based on a lower case version of the REST API project name and its version. For example, MyRESTAPI at version 1.0.0 would have a basePath of "/myrestapi/v1"
 - ACE places some restrictions on the Swagger documents that can be used to create a REST API that are documented here: https://www.ibm.com/docs/en/app-connect/13.0.x?topic=apis-restrictions-swagger-documents
+- There is an example REST API Project available at [`skills/shared/ExampleAPI`](ExampleAPI)
 
 ## Required Files in REST API Projects
 An ACE Toolkit REST API project must contain:
 - a `.project` file in the project root
+- a `.settings` directory
+- a `.settings/org.eclipse.core.resources.prefs` file
 - a `restapi.descriptor` file in the project root
 - an `openapi.json` file in the project root (or alternatively if requested a `swagger.json` )
 - a `gen/<RESTAPIProjectName>.msgflow` file where <RESTAPIProjectName> is the name of the REST API Project
 - a `<operationId>.subflow` file for each operation defined in the REST API  (operations are either defined in openapi.json or swagger.json). The name of the subflow file should match the name of the operationId and the file extension should be .subflow
+- IF a REST API project contains a `.subflow` file that contains a Compute node then you MUST also create a corresponding `.esql` file with matching module name. Do not create subflows with Compute nodes without also creating their ESQL implementations.
 
 **Every one of these files must be created as explicit file output.** Do not describe the project structure in prose and omit any of them. If a file is listed here and not present in the output, the project is incomplete.
 
@@ -320,6 +324,14 @@ An ACE Toolkit REST API project must contain:
 </projectDescription>
 ```
 
+## `.settings` Requirements for a REST API project
+**The `.settings/org.eclipse.core.resources.prefs` file must contain the following exact content verbatim:**
+
+```properties
+eclipse.preferences.version=1
+encoding/<project>=UTF-8
+```
+
 ## `restapi.descriptor` Requirements for a REST API project
 ** Use the following complete `restapi.descriptor` in the project root ** Replace `<ProjectName>` with the actual project folder name.
 
@@ -330,6 +342,10 @@ An ACE Toolkit REST API project must contain:
     <ns2:errorHandlers/>
 </ns2:restapiDescriptor>
 ```
+
+## Example REST API project 
+- When creating a REST API project note the example [`skills/shared/ExampleAPI`](ExampleAPI)
+- When creating `.msgflow` content in a REST API project note the example [`skills/shared/ExampleAPI/gen/ExampleAPI.msgflow`](ExampleAPI.msgflow)
 
 ## When to Create a Shared Library or a Static Library Project
 - If the user asks to create a project for sharing resources across many applications then create either a new Shared Library project or a new Static Library project.
