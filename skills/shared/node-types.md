@@ -78,6 +78,7 @@ This document contains the canonical mapping from ACE node names to the `xmi:typ
 - HTTP Input node → namespace prefix of `ComIbmWSInput.msgnode`
 - HTTP Reply node → namespace prefix of `ComIbmWSReply.msgnode`
 - HTTP Request node → namespace prefix of `ComIbmWSRequest.msgnode`
+  - **Note:** HTTP Request nodes require a `URLSpecifier` attribute that defines the Web Service URL that should be invoked. If not provided, ask the user for their preference.
 - HTTP Header node → namespace prefix of `ComIbmHTTPHeader.msgnode`
 - HTTP Async Request node → namespace prefix of `ComIbmHTTPAsyncRequest.msgnode`
 - HTTP Async Response node → namespace prefix of `ComIbmHTTPAsyncResponse.msgnode`
