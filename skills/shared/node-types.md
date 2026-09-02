@@ -34,6 +34,7 @@ This document contains the canonical mapping from ACE node names to the `xmi:typ
 ## Error handling and tracing nodes
 - Throw node → namespace prefix of `ComIbmThrow.msgnode`
 - Try Catch node → namespace prefix of `ComIbmTryCatch.msgnode`
+  - **Note:** Try Catch nodes have one input terminal named `InTerminal.in` and two output terminals named `OutTerminal.try` and `OutTerminal.catch`
 - Trace node → namespace prefix of `ComIbmTrace.msgnode`
 - Validate node → namespace prefix of `ComIbmValidate.msgnode`
 - Log node → namespace prefix of `ComIbmLog.msgnode`
