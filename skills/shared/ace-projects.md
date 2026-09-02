@@ -171,8 +171,7 @@ encoding/<project>=UTF-8
 - If the user does not express a preference you should use an OpenAPI 3.0 document named openapi.json in preference to a Swagger 2.0 document.
 - If using an OpenAPI 3.0 document and you are not told otherwise then by default within the info object, the title and description should match the name of the REST API project.
 - If using an OpenAPI 3.0 document and you are not told otherwise then by default within the info object, the version should be set to 1.0.0
-- If using an OpenAPI 3.0 document and you are not told otherwise then by default within the info object, the version should be set to 1.0.0
-- If using an OpenAPI 3.0 document and you are not told otherwise then by default the url property shoul dbe based on a lower case version of the REST API project name and its version. For example, MyRESTAPI at version 1.0.0 would have a basePath of "/myrestapi/v1"
+- If using an OpenAPI 3.0 document then the url property inside the servers array (inside openapi.json) should be based on a lower case version of the REST API project name and its version. For example, MyRESTAPI at version 1.0.0 would have a url of "/myrestapi/v1". You MUST follow this advice and use a relative path even if the user has supplied their own OpenAPI document which you are using as the basis of the ACE REST API definition.
 - ACE places some restrictions on the Open API 3.0 documents that can be used to create a REST API that are documented here: https://www.ibm.com/docs/en/app-connect/13.0.x?topic=apis-restrictions-openapi-30-documents
 - If using a Swagger 2.0 document and you are not told otherwise then by default the title and description should match the name of the REST API project.
 - If using a Swagger 2.0 document and you are not told otherwise then by default the version should be set to 1.0.0
