@@ -18,14 +18,15 @@
  * Add discovery connectors from UKG to zohorecruit:  [https://github.com/ot4i/ace-bob/pull/16]
 
 *Add improvements around the structure of the message flow file*
- * Add direct guidance about subflow nodes and their correct xmi:type including library qualified references: TO DO
- * Add direct guidance about the composition element wrapper: TO DO
- * Add direct guidance about node terminal naming (issue around capitalisation of in and out terminals?): TO DO
- * Add direct guidance about eflow namespace URI: TO DO
- * Add direct guidance about eSuperTypes URI: TO DO
- * Add direct guidance about platform specific paths for Windows / xLinux / MacOS: TO DO
+ * Add direct guidance about subflow nodes and their correct xmi:type including library qualified references:  [https://github.com/ot4i/ace-bob/pull/18]
+ * Add direct guidance about the composition element wrapper:  [https://github.com/ot4i/ace-bob/pull/20]
+ * Add direct guidance about node terminal naming (issue around capitalisation of in and out terminals?): BLOCKED until I find examples that do not work
+ * Add direct guidance about eflow namespace URI:  [https://github.com/ot4i/ace-bob/pull/20]
+ * Add direct guidance about eSuperTypes URI:  [https://github.com/ot4i/ace-bob/pull/20]
+ * Add direct guidance about platform specific paths for Windows / xLinux / MacOS: DECIDED NOT NEEDED (after analysis of attached PIs from Windows,Linux and MacOS
  * Embed an example .msgflow to avoid recurrent behaviour of seeking ping_mq.msgflow: [https://github.com/ot4i/ace-bob/pull/9]
- * Add direct guidance about nodeLayoutStyle of RECTANGLE: TO DO
+ * Add direct guidance about nodeLayoutStyle of RECTANGLE:  [https://github.com/ot4i/ace-bob/pull/20]
+ * Add direct guidance about unknown message flow node properties:  [https://github.com/ot4i/ace-bob/pull/24]
  * Add direct guidance for REST node families
  * Add direct guidance for SOAP node families
  * Add direct guidance for TCPIP node families
@@ -35,7 +36,7 @@
 
 *Add specifics to support shared library and static library projects* 
  * Add rules for metadata needed for libraries including library.descriptor and .project:  [https://github.com/ot4i/ace-bob/pull/11]
- * Add rules for linking one project to another through project references: TO DO
+ * Add rules for linking one project to another through project references: [https://github.com/ot4i/ace-bob/pull/19]
 
 *Add improvements for ESQL handling*
  * Add rules for BROKER SCHEMA to match with subdirectory locations of ESQL files: [https://github.com/ot4i/ace-bob/pull/12]
