@@ -1,4 +1,4 @@
-** PLEASE NOTE: This repo is being archived - the forked repository at github.com/ot4i/ace-flowpilot is now being used for the purpose of IBM authored skills for AI Agents **
+**PLEASE NOTE: This repo is being archived - the forked repository at github.com/ot4i/ace-flowpilot is now being used for the purpose of IBM authored skills for AI Agents**
 
 # ace-flowpilot
 This repository provides skill guidance for IBM App Connect Enterprise (ACE) Toolkit users. It combines:
